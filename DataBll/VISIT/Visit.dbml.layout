@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Visit">
+  <DataContextMoniker Name="/VisitDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8c03f5a1-c679-4bb7-b1ef-291340f917c1" absoluteBounds="0.875, 1.125, 2, 5.0483931477864576">
+      <DataClassMoniker Name="/VisitDataContext/youhoo_Visit_Record" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e90711a5-5718-4289-96e7-81e95c255db8" absoluteBounds="0.89000000000000057, 1.585, 1.9700000000000002, 4.488393147786458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9f37c7d5-c428-40c6-ac85-8e21d4873e83" absoluteBounds="5.125, 1.375, 2, 5.2331872558593746">
+      <DataClassMoniker Name="/VisitDataContext/v_VisitRecordWay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd94a32c-7250-41f3-a977-3725c0eabb0b" absoluteBounds="5.14, 1.835, 1.9700000000000002, 4.673187255859375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

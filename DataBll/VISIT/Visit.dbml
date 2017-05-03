@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KeChuange" Class="VisitDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=KeChuange;Persist Security Info=True;User ID=sa" SettingsObjectName="YouHoo.DataBll.Properties.Settings" SettingsPropertyName="KeChuangeConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.youhoo_Visit_Record" Member="youhoo_Visit_Record">
+    <Type Name="youhoo_Visit_Record">
+      <Column Name="visit_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cCusName" Type="System.String" DbType="NVarChar(98) NOT NULL" CanBeNull="false" />
+      <Column Name="cCusAbbName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="cCusCode" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneNumber" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="cCusPerson" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="visit_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="visit_location" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="visit_person" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="visit_startTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="visit_endTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="visit_way_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="visit_content" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="visit_NextPlan" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="visit_ManagerOpinion" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="verifi_state" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_VisitRecordWay" Member="v_VisitRecordWay">
+    <Type Name="v_VisitRecordWay">
+      <Column Name="visit_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cCusName" Type="System.String" DbType="NVarChar(98) NOT NULL" CanBeNull="false" />
+      <Column Name="cCusAbbName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="cCusCode" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneNumber" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="cCusPerson" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="visit_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="visit_location" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="visit_person" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="visit_startTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="visit_endTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="visit_way_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="visit_content" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="visit_NextPlan" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="visit_ManagerOpinion" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="verifi_state" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="visit_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

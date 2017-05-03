@@ -1,0 +1,27 @@
+/*全局定义*/
+.buttonParent { height: 25px; }
+.buttonShade { width: 100%; height: 40px; text-align: center; background-color: #eaeef1; border-top: 2px solid #b9cbd7; position: fixed; bottom: 0px; left: 0px; z-index: 199; }
+.buttonShade .Inputbtn { margin-top: 8px; }
+.Inputbtn { height: 24px; line-height: 18px; background: transparent url(../btn_bg.jpg) repeat scroll 0 0; border: 1px solid #9dc2f6; cursor: pointer; color: #333333; font-size: 12px; padding: 2px 8px; margin: 0px 2px; }
+.Inputbtn:hover { background-image: url(../btn_bg_hover.jpg) !important; border: 1px solid #af923f !important; }
+.bezel { padding-top: 20px; }
+.mainbody { margin: 15px; }
+.text_slice { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.tableMain table tr td .lbl_ajaxUpdate { display: block; width: 100%; height: 20px; cursor: pointer; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.tableMain table tr td .img_ajaxUpdate { cursor: pointer; }
+.tableMain table tr td .txt_ajaxUpdate { display: none; width: 100%; text-align: center; }
+.tableMain table tr td .ddl_ajaxUpdate { display: none; width: 100%; }
+.choose { display: inline-block; cursor: pointer; width: 14px; height: 14px; background: url(../choose.gif) no-repeat 0px 0px; }
+/*分页的样式*/
+.anpager .cpb { background: #1F3A87 none repeat scroll 0 0; border: 1px solid #CCCCCC; color: #FFFFFF; font-weight: bold; margin: 2px 1px 0 0; padding: 2px 3px 0; }
+.anpager a { background: #FFFFFF none repeat scroll 0 0; border: 1px solid #CCCCCC; color: #000000; margin: 2px 1px 0 0; padding: 2px 3px 0; text-decoration: none; }
+.anpager a:hover { background: #1F3A87 none repeat scroll 0 0; border: 1px solid #1F3A87; color: #FFFFFF; }
+.anpager .goClass { height: 24px; line-height: 20px; background: transparent url(../btn_bg.jpg) repeat scroll 0 0; border: 1px solid #9dc2f6; cursor: pointer; color: #333333; font-size: 12px; padding: 2px 8px; margin-top: -6px; }
+.anpager .goClass:hover { background-image: url(../btn_bg_hover.jpg) !important; border: 1px solid #af923f !important; }
+
+/*加载*/
+.content_loading { width: 100%; height: 50px; line-height: 50px; text-align: center; }
+.content_loading em { background: url(/Js/jsPrompt/images/loading.gif) no-repeat left center; padding-left: 20px; }
+
+.success { color: #47dd70; }
+.fail { color: red; }

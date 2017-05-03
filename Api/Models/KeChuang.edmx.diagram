@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8e7e5efd53bc47e2b4aa7a0eaec67530" Name="Diagram1">
+        <EntityTypeShape EntityType="KeChuangeModel.Logs" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_BasicArchive_brand" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_BasicArchive_channel" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_BasicArchive_item" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_BasicArchive_price" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_BasicArchive_region" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_BasicArchive_sort" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_BasicArchive_SupportPrice" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_BasicArchive_SupportWay" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_BasicArchive_time" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_rebate_RebatePolicy" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_rebate_RebatePolicys" Width="1.5" PointX="8" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_rebate_RebateWay" Width="1.5" PointX="11.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_rebate_sale" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_action" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_Department" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_dictionary" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_dictionary_child" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_files" Width="1.5" PointX="2.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_module" Width="1.5" PointX="4.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_node" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_power" Width="1.5" PointX="14.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_powergroup" Width="1.5" PointX="6.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.Youhoo_sys_Process" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_Result" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_store" Width="1.5" PointX="8.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_system_set" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeChuangeModel.youhoo_sys_users" Width="1.5" PointX="14.75" PointY="14.75" IsExpanded="true" />
+        <AssociationConnector Association="KeChuangeModel.FK_youhoo_rebate_RebatePolicys_youhoo_rebate_RebatePolicy" ManuallyRouted="false" />
+        <AssociationConnector Association="KeChuangeModel.FK_Process_Node" ManuallyRouted="false" />
+        <AssociationConnector Association="KeChuangeModel.FK_Process_Result" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

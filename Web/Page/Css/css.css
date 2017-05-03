@@ -1,0 +1,28 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*全局*/
+body { font-family: "微软雅黑"; font-size: 100%; font-size: 12px; line-height: 20px; font-weight: normal; margin: 0px; padding: 0px; color: #39425f; background: #fff; overflow: hidden; }
+html { -webkit-text-size-adjust: 100%; }
+html, body { height: 100%; width: 100%; }
+form, input, select, p { margin: 0px; padding: 0px; }
+img { border: none; margin: 0; }
+h1, h2, h3, h4 { padding: 0; margin: 0; color: #39425f; }
+ul, li { list-style-image: none; list-style-type: none; margin: 0px; padding: 0px; }
+a:link, a:visited, a:active { color: #39425f; text-decoration: none; }
+a:hover { color: #d0000e; text-decoration: none; }
+i { list-style: none; font-style: normal; }
+em { list-style: none; font-style: normal; }
+b { font-weight: normal; }
+iframe { margin: 0; padding: 0; }
+div img { font-size: 0; max-width: 100%; max-height: 100%; }
+.fl { float: left; }
+.fr { float: right; }
+.none { display: none; }
+.clear { clear: both; }
+.text_slice { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.content { font-size: 18px; line-height: 30px; padding: 0px 10px; letter-spacing: 2px; text-align: center; margin-top: 80px; }
+.content .special { color: #ed2379; font-size: 24px; }
+.content a { color: #85a4ed; }
+.content .prompt { padding-top: 10px; text-align: center; }

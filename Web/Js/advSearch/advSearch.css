@@ -1,0 +1,6 @@
+﻿/*高级搜索*/
+#advSearch{position:fixed;top:70px;right:3px;border:1px solid #ccc; z-index:1000;}
+#advSearch .advSearch_cont{padding:10px 0px;background-color:#B3DBF5;}
+#advSearch table{border:0px;display:none;}
+#advSearch table .t_r { text-align:right;}
+#advSearch .bar{width:25px;height:105px;position:absolute;left:-25px;top:-1px;background:url(mini_bg.PNG) -25px 0px no-repeat;display:block;}

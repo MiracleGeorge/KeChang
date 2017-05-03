@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>网站维护中</title>
+    <link rel="Stylesheet" type="text/css" href="Css/css.css" />
+    <script type="text/javascript" src="/Js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/Js/helper.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            if (QueryString("ReturnUrl") == null || QueryString("ReturnUrl") == "") {
+                $("#refresh").attr("href", "/");
+            }
+            else {
+                $("#refresh").attr("href", QueryString("ReturnUrl"));
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="content">
+        <p style="margin: 18px 0px;"><span class="special">网站维护中</span></p>
+        <p>网站维护中，给您造成不便敬请谅解！</p>
+        <p class="prompt">您可以：<a id="refresh" href="javascript:;">刷新重试</a></p>
+    </div>
+</body>
+</html>

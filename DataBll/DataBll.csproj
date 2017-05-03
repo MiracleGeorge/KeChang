@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF384240-0684-4D83-8136-04390E80C73B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YouHoo.DataBll</RootNamespace>
+    <AssemblyName>DataBll</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveBrandBLL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveChannelBLL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveItemBLL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchivePriceBLL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveRegionBLL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveSortBLL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveSupportpriceBLL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveSupportwayBLL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveTimeBLL.cs" />
+    <Compile Include="BLLBase.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="REBATE\Kechang.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kechang.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="REBATE\YouhooRebateRebatepolicyBLL.cs" />
+    <Compile Include="REBATE\YouhooRebateRebatewayBLL.cs" />
+    <Compile Include="REBATE\YouhooRebateSaleBLL.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SYS\LogsBLL.cs" />
+    <Compile Include="SYS\YouhooSysActionBLL.cs" />
+    <Compile Include="SYS\YouhooSysDepartmentBLL.cs" />
+    <Compile Include="SYS\YouhooSysDictionaryBLL.cs" />
+    <Compile Include="SYS\YouhooSysDictionaryChildBLL.cs" />
+    <Compile Include="SYS\YouhooSysFilesBLL.cs" />
+    <Compile Include="SYS\YouhooSysModuleBLL.cs" />
+    <Compile Include="SYS\YouhooSysNodeBLL.cs" />
+    <Compile Include="SYS\YouhooSysPowerBLL.cs" />
+    <Compile Include="SYS\YouhooSysPowergroupBLL.cs" />
+    <Compile Include="SYS\YouhooSysProcessBLL.cs" />
+    <Compile Include="SYS\YouhooSysStoreBLL.cs" />
+    <Compile Include="SYS\YouhooSysSystemSetBLL.cs" />
+    <Compile Include="SYS\YouhooSysUsersBLL.cs" />
+    <Compile Include="ufdata.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ufdata.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Ufida.cs" />
+    <Compile Include="VISIT\Visit.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Visit.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="VISIT\YouhooVisitRecordBLL.cs" />
+    <Compile Include="VISIT\YouhooVisitRecordBLLExtend.cs" />
+    <Compile Include="VISIT\YouhooVisitVisitwayBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{057F02E8-1385-4EB3-B926-89DED1CB880C}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataOperation\DataOperation.csproj">
+      <Project>{40C91EE6-30B4-49A4-B3F8-28265137588B}</Project>
+      <Name>DataOperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataTools\DataTools.csproj">
+      <Project>{98652A40-1877-4499-972E-525AFA2EE2C7}</Project>
+      <Name>DataTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="REBATE\Kechang.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Kechang.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ufdata.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ufdata.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VISIT\Visit.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Visit.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="REBATE\Kechang.dbml.layout">
+      <DependentUpon>Kechang.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VISIT\Visit.dbml.layout">
+      <DependentUpon>Visit.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ufdata.dbml.layout">
+      <DependentUpon>ufdata.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

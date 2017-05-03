@@ -1,0 +1,49 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html, body { -webkit-text-size-adjust: none; }
+html { text-align: left; background-color: #ffffff; }
+body { font-family: '微软雅黑',Arial; color: #000000; font-size: 12px; margin: 0px; background: url(../body_bg.jpg) no-repeat 0px -100px; overflow: hidden; }
+input, img { vertical-align: middle; }
+ol, ul { list-style: none; }
+li { list-style-type: none; }
+img { border: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+* { margin: 0; padding: 0; }
+/****************************************************************************************************/
+.Arial12 { font-family: Arial; font-size: 12px; color: #666666; }
+.h150 { line-height: 150%; }
+.float_l { float: left; }
+.float_r { float: right; }
+.clearfix { *zoom: 1; clear: both; }
+.clearfix:after { clear: both; height: 0; overflow: hidden; display: block; visibility: hidden; content: "."; }
+/*链接样式*/
+a { font-size: 12px; color: #666; text-decoration: none; }
+a:hover { font-size: 12px; color: #ff9900; text-decoration: none; }
+.login_main { position: absolute; top: 50%; left: 50%; width: 820px; min-width: 820px; height: 553px; margin: -210px 0px 0px -420px; }
+.login_main .login_title { width: 820px; font-family: "微软雅黑"; font-size: 26px; color: #fff; text-align: center; line-height: 83px; }
+.login_main .login_con { width: 790px; height: 440px; background: url(../login_mainbg.png) 0px 0px no-repeat; padding: 15px; overflow: hidden; }
+/*  logo及微博等外链部分  */
+.login_main .login_con .log_logo_weibo { width: 790px; height: 80px; }
+.login_main .login_con .log_logo_weibo .log_logo { margin: 20px 0px 0px 15px; font-size: 30px; }
+.login_main .login_con .log_logo_weibo .log_weibo { padding-top: 29px; }
+.login_main .login_con .log_logo_weibo .log_weibo li { float: left; width: 24px; height: 24px; text-indent: -9999px; margin-right: 10px; }
+.login_main .login_con .log_logo_weibo .log_weibo li a { display: block; width: 24px; height: 24px; background-image: url(../login_weibo.png); background-repeat: no-repeat; -webkit-transition: all .4s ease-in-out; -moz-transition: all .4s ease-in-out; -ms-transition: all .4s ease-in-out; -o-transition: all .4s ease-in-out; transition: all .4s ease-in-out; }
+.login_main .login_con .log_logo_weibo .log_weibo .ico_weibo a { background-position: 0px 0px; }
+.login_main .login_con .log_logo_weibo .log_weibo .ico_weibo a:hover { background-position: 0px -25px; }
+.login_main .login_con .log_logo_weibo .log_weibo .ico_qq a { background-position: -25px 0px; }
+.login_main .login_con .log_logo_weibo .log_weibo .ico_qq a:hover { background-position: -25px -25px; }
+.login_main .login_con .log_logo_weibo .log_weibo .ico_weixin a { background-position: -50px 0px; }
+.login_main .login_con .log_logo_weibo .log_weibo .ico_weixin a:hover { background-position: -50px -25px; }
+/*  左边书架图片  */
+.login_main .login_con .log_l_img { width: 395px; height: 301px; overflow: hidden; text-align: center; }
+/*  右边登录表单  */
+.login_main .login_con .log_r_form { width: 394px; height: 301px; overflow: hidden; }
+.login_main .login_con .log_r_form .denglu { font-family: "微软雅黑"; font-size: 18px; color: #4a576c; padding-left: 70px; line-height: 46px; }
+.login_main .login_con .log_r_form .log_table { margin-top: 9px; }
+.login_main .login_con .log_r_form .log_table .left_td { font-family: "微软雅黑"; font-size: 14px; color: #4a576c; text-align: right; }
+.login_main .login_con .log_r_form .log_table .right_td { padding-left: 10px; }
+.input { height: 22px; padding: 1px 3px; border: 1px solid #d9dbe0; background-color: #f9fafa; line-height: 22px; }
+.input175 { width: 169px; }
+.input110 { width: 104px; }
+.loginbtn { width: 94px; height: 29px; background: url(../login_button.jpg) 0px 0px repeat-x; border: none; cursor: pointer; color: #f2efef; font-size: 14px; }
+.yzm img { width: 56px; height: 26px; }

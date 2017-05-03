@@ -1,0 +1,175 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<FlowFlie>
+<contacts title='电话呼入' desc=''>
+<node text='数据库操作' desc='黑名单' event='' url='' param='|SQLBasic||;select id from hmd where phone=&apos;;@主叫号码;&apos;|@执行结果|'>
+</node>
+<node text='条件选择' desc='@执行结果' event='' url='' param='|@执行结果|'>
+<node text='条件匹配' desc='空' event='' url='' param='|空|'>
+<node text='摘机' desc='摘机' event='' url='' param='||'>
+</node>
+<node text='条件选择' desc='@通道号' event='' url='' param='|@通道号|'>
+<node text='条件匹配' desc='12' event='' url='' param='|12|'>
+<node text='跳转标识' desc='123' event='' url='' param='|123|'>
+</node>
+<node text='播放语音' desc='播放语音' event='' url='' param='|MyVox|Welcome.wav|1|1|0|1|'>
+</node>
+<node text='接收按键' desc='接收按键' event='' url='' param='|1|90|0||0|0|'>
+</node>
+<node text='条件选择' desc='@执行结果' event='' url='' param='|@执行结果|'>
+<node text='条件匹配' desc='0' event='' url='' param='|0|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|0||'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='2' event='' url='' param='|2|'>
+<node text='播放语音' desc='播放语音' event='' url='' param='|MyVox|fenzu.wav|1|1|0|0|'>
+</node>
+<node text='接收按键' desc='接收按键' event='' url='' param='|1|90|0||0|0|'>
+</node>
+<node text='条件选择' desc='@执行结果' event='' url='' param='|@执行结果|'>
+<node text='条件匹配' desc='6' event='' url='' param='|6|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|6||'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='7' event='' url='' param='|7|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|7||'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='缺省匹配' desc='缺省匹配' event='' url='' param='|缺省匹配|'>
+<node text='延时' desc='20' event='' url='' param='|20|'>
+</node>
+<node text='挂机' desc='挂机' event='' url='' param='||'>
+</node>
+</node>
+</node>
+</node>
+<node text='条件匹配' desc='1' event='' url='' param='|1|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|1||'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='3' event='' url='' param='|3|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|3||'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='5' event='' url='' param='|5|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|5||'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='挂机事件' event='' url='' param='|挂机事件|'>
+</node>
+<node text='缺省匹配' desc='缺省匹配' event='' url='' param='|缺省匹配|'>
+<node text='流程跳转' desc='123' event='' url='' param='|123|0|'>
+</node>
+</node>
+</node>
+</node>
+<node text='条件匹配' desc='41' event='' url='' param='|41|'>
+<node text='时间组件' desc='时间组件' event='' url='' param='|1|1|8:00:00|20:00:00|2|0|0:00:00|23:59:59|3|0|0:00:00|23:59:59|4|0|0:00:00|23:59:59|5|0|0:00:00|23:59:59|6|0|0:00:00|23:59:59|7|0|0:00:00|23:59:59|8|0|0:00:00|23:59:59|'>
+</node>
+<node text='条件选择' desc='@执行结果' event='' url='' param='|@执行结果|'>
+<node text='条件匹配' desc='1' event='' url='' param='|1|'>
+<node text='数据库操作' desc='数据库操作' event='' url='' param='|SQLBasic||;select top 1 extNo from tCalllog where trkNum = &apos;;@主叫号码;&apos; order by beginTime desc;|@执行结果|'>
+</node>
+<node text='条件选择' desc='@执行结果' event='' url='' param='|@执行结果|'>
+<node text='条件匹配' desc='154' event='' url='' param='|154|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|98|@组号|'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='175' event='' url='' param='|175|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|99|@组号|'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='缺省匹配' desc='缺省匹配' event='' url='' param='|缺省匹配|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|94|@组号|'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+</node>
+</node>
+<node text='缺省匹配' desc='缺省匹配' event='' url='' param='|缺省匹配|'>
+<node text='流程跳转' desc='转接手机' event='' url='' param='|转接手机|1|'>
+</node>
+</node>
+</node>
+</node>
+<node text='缺省匹配' desc='缺省匹配' event='' url='' param='|缺省匹配|'>
+<node text='条件选择' desc='@被叫号码' event='' url='' param='|@被叫号码|'>
+<node text='条件匹配' desc='51176706' event='' url='' param='|51176706|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|80||'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='51176716' event='' url='' param='|51176716|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|94||'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='51176707' event='' url='' param='|51176707|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|90|@组号|'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='51176710' event='' url='' param='|51176710|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|99|@组号|'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='51176717' event='' url='' param='|51176717|'>
+<node text='播放语音' desc='播放语音' event='' url='' param='|MyVox|welcome8.wav|1|1|0|0|'>
+</node>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|163||'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='条件匹配' desc='51176711' event='' url='' param='|51176711|'>
+<node text='变量运算' desc='变量运算' event='' url='' param='|=|@组号|98|@组号|'>
+</node>
+<node text='流程跳转' desc='ACD' event='' url='' param='|ACD|1|'>
+</node>
+</node>
+<node text='缺省匹配' desc='缺省匹配' event='' url='' param='|缺省匹配|'>
+<node text='播放语音' desc='播放语音' event='' url='' param='|MyVox|welcome.wav|1|1|0|1|'>
+</node>
+<node text='条件选择' desc='@执行结果' event='' url='' param='|@执行结果|'>
+<node text='条件匹配' desc='挂机事件' event='' url='' param='|挂机事件|'>
+</node>
+<node text='缺省匹配' desc='缺省匹配' event='' url='' param='|缺省匹配|'>
+<node text='流程跳转' desc='接收按键' event='' url='' param='|接收按键|1|'>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+<node text='缺省匹配' desc='缺省匹配' event='' url='' param='|缺省匹配|'>
+<node text='延时' desc='20' event='' url='' param='|20|'>
+</node>
+<node text='挂机' desc='挂机' event='' url='' param='||'>
+</node>
+</node>
+</node>
+</contacts>
+</FlowFlie>

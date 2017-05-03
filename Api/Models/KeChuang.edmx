@@ -1,0 +1,1627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KeChuangeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="log_id" />
+          </Key>
+          <Property Name="log_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tablename" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="olddata" Type="ntext" />
+          <Property Name="newdata" Type="ntext" />
+          <Property Name="datatype" Type="nvarchar" MaxLength="50" />
+          <Property Name="cname" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_brand">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_channel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_item">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_price">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_region">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_sort">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_SupportPrice">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_SupportWay">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_time">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_rebate_RebatePolicy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="channel_id" Type="int" />
+          <Property Name="price_id" Type="int" />
+          <Property Name="region_id" Type="int" />
+          <Property Name="sort_id_id" Type="int" />
+          <Property Name="SupportWay_id" Type="int" />
+          <Property Name="SupportPrice_id" Type="int" />
+          <Property Name="RebateType_id" Type="int" />
+          <Property Name="time_id" Type="int" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_rebate_RebatePolicys">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Policy_id" Type="int" Nullable="false" />
+          <Property Name="brand_id" Type="int" Nullable="false" />
+          <Property Name="DisCount" Type="float" Nullable="false" />
+          <Property Name="item_id" Type="int" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_rebate_RebateWay">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rebate_type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_rebate_sale">
+          <Key>
+            <PropertyRef Name="Rebate_id" />
+          </Key>
+          <Property Name="Rebate_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_action">
+          <Key>
+            <PropertyRef Name="action_id" />
+          </Key>
+          <Property Name="action_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="action_name" Type="nvarchar" MaxLength="400" Nullable="false" />
+          <Property Name="action_value" Type="nvarchar" MaxLength="50" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StoreId" Type="int" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="SubCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubName" Type="nvarchar" MaxLength="50" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_dictionary">
+          <Key>
+            <PropertyRef Name="dictionary_id" />
+          </Key>
+          <Property Name="dictionary_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dictionary_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="is_multilayer" Type="int" Nullable="false" />
+          <Property Name="sort" Type="int" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_dictionary_child">
+          <Key>
+            <PropertyRef Name="dictionary_child_id" />
+          </Key>
+          <Property Name="dictionary_child_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dictionary_child_name" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="dictionary_id" Type="int" Nullable="false" />
+          <Property Name="parent_dictionary_child_id" Type="int" Nullable="false" />
+          <Property Name="is_start" Type="int" Nullable="false" />
+          <Property Name="sort" Type="int" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_files">
+          <Key>
+            <PropertyRef Name="file_id" />
+          </Key>
+          <Property Name="file_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="table_id" Type="int" Nullable="false" />
+          <Property Name="table_file_id" Type="int" Nullable="false" />
+          <Property Name="file_name" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="file_path" Type="nvarchar" MaxLength="500" />
+          <Property Name="file_size" Type="nvarchar" MaxLength="50" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_module">
+          <Key>
+            <PropertyRef Name="module_id" />
+          </Key>
+          <Property Name="module_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="module_name" Type="nvarchar" MaxLength="400" Nullable="false" />
+          <Property Name="parentmodule_id" Type="int" Nullable="false" />
+          <Property Name="module_url" Type="nvarchar" MaxLength="400" />
+          <Property Name="module_value" Type="nvarchar" MaxLength="50" />
+          <Property Name="sort" Type="int" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_node">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NodeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProcessId" Type="int" Nullable="false" />
+          <Property Name="StoreId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_power">
+          <Key>
+            <PropertyRef Name="power_id" />
+          </Key>
+          <Property Name="power_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="module_id" Type="int" Nullable="false" />
+          <Property Name="action_id" Type="int" Nullable="false" />
+          <Property Name="power_value" Type="nvarchar" MaxLength="50" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_powergroup">
+          <Key>
+            <PropertyRef Name="powergroup_id" />
+          </Key>
+          <Property Name="powergroup_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StoreId" Type="int" Nullable="false" />
+          <Property Name="powergroup_name" Type="nvarchar" MaxLength="400" Nullable="false" />
+          <Property Name="powergroup_value" Type="ntext" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Youhoo_sys_Process">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sort" Type="int" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_Result">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProcessId" Type="int" Nullable="false" />
+          <Property Name="NodeId" Type="int" Nullable="false" />
+          <Property Name="ProcessStatus" Type="bit" Nullable="false" />
+          <Property Name="ProcessOpinion" Type="ntext" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_store">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SubCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentTerm" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="100" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_system_set">
+          <Key>
+            <PropertyRef Name="system_set_id" />
+          </Key>
+          <Property Name="system_set_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="system_set_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="system_set_hou_logo" Type="nvarchar" MaxLength="200" />
+          <Property Name="system_set_login_biaozhi" Type="nvarchar" MaxLength="200" />
+          <Property Name="system_set_icon" Type="nvarchar" MaxLength="200" />
+          <Property Name="initial_pwd" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="list_show_count" Type="int" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_users">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="usercode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="real_name" Type="nvarchar" MaxLength="20" />
+          <Property Name="StoreId" Type="int" Nullable="false" />
+          <Property Name="departmentId" Type="int" Nullable="false" />
+          <Property Name="phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="tel" Type="nvarchar" MaxLength="20" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="powergroup_id" Type="int" Nullable="false" />
+          <Property Name="IsSaleMan" Type="bit" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="remark" Type="ntext" />
+          <Property Name="flag" Type="int" />
+          <Property Name="createoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="updateoperator" Type="nvarchar" MaxLength="50" />
+          <Property Name="updatedate" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_Process_Node">
+          <End Role="Youhoo_sys_Process" Type="Self.Youhoo_sys_Process" Multiplicity="1" />
+          <End Role="youhoo_sys_node" Type="Self.youhoo_sys_node" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Youhoo_sys_Process">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="youhoo_sys_node">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Result">
+          <End Role="Youhoo_sys_Process" Type="Self.Youhoo_sys_Process" Multiplicity="1" />
+          <End Role="youhoo_sys_Result" Type="Self.youhoo_sys_Result" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Youhoo_sys_Process">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="youhoo_sys_Result">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_youhoo_rebate_RebatePolicys_youhoo_rebate_RebatePolicy">
+          <End Role="youhoo_rebate_RebatePolicy" Type="Self.youhoo_rebate_RebatePolicy" Multiplicity="1" />
+          <End Role="youhoo_rebate_RebatePolicys" Type="Self.youhoo_rebate_RebatePolicys" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="youhoo_rebate_RebatePolicy">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="youhoo_rebate_RebatePolicys">
+              <PropertyRef Name="Policy_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="KeChuangeModelStoreContainer">
+          <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_BasicArchive_brand" EntityType="Self.youhoo_BasicArchive_brand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_BasicArchive_channel" EntityType="Self.youhoo_BasicArchive_channel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_BasicArchive_item" EntityType="Self.youhoo_BasicArchive_item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_BasicArchive_price" EntityType="Self.youhoo_BasicArchive_price" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_BasicArchive_region" EntityType="Self.youhoo_BasicArchive_region" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_BasicArchive_sort" EntityType="Self.youhoo_BasicArchive_sort" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_BasicArchive_SupportPrice" EntityType="Self.youhoo_BasicArchive_SupportPrice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_BasicArchive_SupportWay" EntityType="Self.youhoo_BasicArchive_SupportWay" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_BasicArchive_time" EntityType="Self.youhoo_BasicArchive_time" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_rebate_RebatePolicy" EntityType="Self.youhoo_rebate_RebatePolicy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_rebate_RebatePolicys" EntityType="Self.youhoo_rebate_RebatePolicys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_rebate_RebateWay" EntityType="Self.youhoo_rebate_RebateWay" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_rebate_sale" EntityType="Self.youhoo_rebate_sale" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_action" EntityType="Self.youhoo_sys_action" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_Department" EntityType="Self.youhoo_sys_Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_dictionary" EntityType="Self.youhoo_sys_dictionary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_dictionary_child" EntityType="Self.youhoo_sys_dictionary_child" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_files" EntityType="Self.youhoo_sys_files" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_module" EntityType="Self.youhoo_sys_module" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_node" EntityType="Self.youhoo_sys_node" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_power" EntityType="Self.youhoo_sys_power" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_powergroup" EntityType="Self.youhoo_sys_powergroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Youhoo_sys_Process" EntityType="Self.Youhoo_sys_Process" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_Result" EntityType="Self.youhoo_sys_Result" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_store" EntityType="Self.youhoo_sys_store" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_system_set" EntityType="Self.youhoo_sys_system_set" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="youhoo_sys_users" EntityType="Self.youhoo_sys_users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Process_Node" Association="Self.FK_Process_Node">
+            <End Role="Youhoo_sys_Process" EntitySet="Youhoo_sys_Process" />
+            <End Role="youhoo_sys_node" EntitySet="youhoo_sys_node" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Result" Association="Self.FK_Process_Result">
+            <End Role="Youhoo_sys_Process" EntitySet="Youhoo_sys_Process" />
+            <End Role="youhoo_sys_Result" EntitySet="youhoo_sys_Result" />
+          </AssociationSet>
+          <AssociationSet Name="FK_youhoo_rebate_RebatePolicys_youhoo_rebate_RebatePolicy" Association="Self.FK_youhoo_rebate_RebatePolicys_youhoo_rebate_RebatePolicy">
+            <End Role="youhoo_rebate_RebatePolicy" EntitySet="youhoo_rebate_RebatePolicy" />
+            <End Role="youhoo_rebate_RebatePolicys" EntitySet="youhoo_rebate_RebatePolicys" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KeChuangeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="log_id" />
+          </Key>
+          <Property Name="log_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tablename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="olddata" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="newdata" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="datatype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_brand">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_channel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_item">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_price">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_region">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_sort">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_SupportPrice">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_SupportWay">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_BasicArchive_time">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_rebate_RebatePolicy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="channel_id" Type="Int32" />
+          <Property Name="price_id" Type="Int32" />
+          <Property Name="region_id" Type="Int32" />
+          <Property Name="sort_id_id" Type="Int32" />
+          <Property Name="SupportWay_id" Type="Int32" />
+          <Property Name="SupportPrice_id" Type="Int32" />
+          <Property Name="RebateType_id" Type="Int32" />
+          <Property Name="time_id" Type="Int32" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="youhoo_rebate_RebatePolicys" Relationship="Self.FK_youhoo_rebate_RebatePolicys_youhoo_rebate_RebatePolicy" FromRole="youhoo_rebate_RebatePolicy" ToRole="youhoo_rebate_RebatePolicys" />
+        </EntityType>
+        <EntityType Name="youhoo_rebate_RebatePolicys">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Policy_id" Type="Int32" Nullable="false" />
+          <Property Name="brand_id" Type="Int32" Nullable="false" />
+          <Property Name="DisCount" Type="Double" Nullable="false" />
+          <Property Name="item_id" Type="Int32" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="youhoo_rebate_RebatePolicy" Relationship="Self.FK_youhoo_rebate_RebatePolicys_youhoo_rebate_RebatePolicy" FromRole="youhoo_rebate_RebatePolicys" ToRole="youhoo_rebate_RebatePolicy" />
+        </EntityType>
+        <EntityType Name="youhoo_rebate_RebateWay">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rebate_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_rebate_sale">
+          <Key>
+            <PropertyRef Name="Rebate_id" />
+          </Key>
+          <Property Name="Rebate_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_action">
+          <Key>
+            <PropertyRef Name="action_id" />
+          </Key>
+          <Property Name="action_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="action_name" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="action_value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StoreId" Type="Int32" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SubCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_dictionary">
+          <Key>
+            <PropertyRef Name="dictionary_id" />
+          </Key>
+          <Property Name="dictionary_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dictionary_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="is_multilayer" Type="Int32" Nullable="false" />
+          <Property Name="sort" Type="Int32" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_dictionary_child">
+          <Key>
+            <PropertyRef Name="dictionary_child_id" />
+          </Key>
+          <Property Name="dictionary_child_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dictionary_child_name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="dictionary_id" Type="Int32" Nullable="false" />
+          <Property Name="parent_dictionary_child_id" Type="Int32" Nullable="false" />
+          <Property Name="is_start" Type="Int32" Nullable="false" />
+          <Property Name="sort" Type="Int32" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_files">
+          <Key>
+            <PropertyRef Name="file_id" />
+          </Key>
+          <Property Name="file_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="table_id" Type="Int32" Nullable="false" />
+          <Property Name="table_file_id" Type="Int32" Nullable="false" />
+          <Property Name="file_name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="file_path" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="file_size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_module">
+          <Key>
+            <PropertyRef Name="module_id" />
+          </Key>
+          <Property Name="module_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="module_name" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="parentmodule_id" Type="Int32" Nullable="false" />
+          <Property Name="module_url" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="module_value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sort" Type="Int32" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_node">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NodeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProcessId" Type="Int32" Nullable="false" />
+          <Property Name="StoreId" Type="Int32" Nullable="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Youhoo_sys_Process" Relationship="Self.FK_Process_Node" FromRole="youhoo_sys_node" ToRole="Youhoo_sys_Process" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_power">
+          <Key>
+            <PropertyRef Name="power_id" />
+          </Key>
+          <Property Name="power_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="module_id" Type="Int32" Nullable="false" />
+          <Property Name="action_id" Type="Int32" Nullable="false" />
+          <Property Name="power_value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_powergroup">
+          <Key>
+            <PropertyRef Name="powergroup_id" />
+          </Key>
+          <Property Name="powergroup_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StoreId" Type="Int32" Nullable="false" />
+          <Property Name="powergroup_name" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="powergroup_value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Youhoo_sys_Process">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sort" Type="Int32" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="youhoo_sys_node" Relationship="Self.FK_Process_Node" FromRole="Youhoo_sys_Process" ToRole="youhoo_sys_node" />
+          <NavigationProperty Name="youhoo_sys_Result" Relationship="Self.FK_Process_Result" FromRole="Youhoo_sys_Process" ToRole="youhoo_sys_Result" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_Result">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProcessId" Type="Int32" Nullable="false" />
+          <Property Name="NodeId" Type="Int32" Nullable="false" />
+          <Property Name="ProcessStatus" Type="Boolean" Nullable="false" />
+          <Property Name="ProcessOpinion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Youhoo_sys_Process" Relationship="Self.FK_Process_Result" FromRole="youhoo_sys_Result" ToRole="Youhoo_sys_Process" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_store">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SubCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentTerm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_system_set">
+          <Key>
+            <PropertyRef Name="system_set_id" />
+          </Key>
+          <Property Name="system_set_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="system_set_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="system_set_hou_logo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="system_set_login_biaozhi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="system_set_icon" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="initial_pwd" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="list_show_count" Type="Int32" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="youhoo_sys_users">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="usercode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="real_name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="StoreId" Type="Int32" Nullable="false" />
+          <Property Name="departmentId" Type="Int32" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="powergroup_id" Type="Int32" Nullable="false" />
+          <Property Name="IsSaleMan" Type="Boolean" Nullable="false" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" />
+          <Property Name="createoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="createdate" Type="DateTime" Precision="3" />
+          <Property Name="updateoperator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="updatedate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="FK_youhoo_rebate_RebatePolicys_youhoo_rebate_RebatePolicy">
+          <End Role="youhoo_rebate_RebatePolicy" Type="Self.youhoo_rebate_RebatePolicy" Multiplicity="1" />
+          <End Role="youhoo_rebate_RebatePolicys" Type="Self.youhoo_rebate_RebatePolicys" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="youhoo_rebate_RebatePolicy">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="youhoo_rebate_RebatePolicys">
+              <PropertyRef Name="Policy_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Node">
+          <End Role="Youhoo_sys_Process" Type="Self.Youhoo_sys_Process" Multiplicity="1" />
+          <End Role="youhoo_sys_node" Type="Self.youhoo_sys_node" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Youhoo_sys_Process">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="youhoo_sys_node">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Process_Result">
+          <End Role="Youhoo_sys_Process" Type="Self.Youhoo_sys_Process" Multiplicity="1" />
+          <End Role="youhoo_sys_Result" Type="Self.youhoo_sys_Result" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Youhoo_sys_Process">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="youhoo_sys_Result">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="KeChuangeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Logs" EntityType="Self.Logs" />
+          <EntitySet Name="youhoo_BasicArchive_brand" EntityType="Self.youhoo_BasicArchive_brand" />
+          <EntitySet Name="youhoo_BasicArchive_channel" EntityType="Self.youhoo_BasicArchive_channel" />
+          <EntitySet Name="youhoo_BasicArchive_item" EntityType="Self.youhoo_BasicArchive_item" />
+          <EntitySet Name="youhoo_BasicArchive_price" EntityType="Self.youhoo_BasicArchive_price" />
+          <EntitySet Name="youhoo_BasicArchive_region" EntityType="Self.youhoo_BasicArchive_region" />
+          <EntitySet Name="youhoo_BasicArchive_sort" EntityType="Self.youhoo_BasicArchive_sort" />
+          <EntitySet Name="youhoo_BasicArchive_SupportPrice" EntityType="Self.youhoo_BasicArchive_SupportPrice" />
+          <EntitySet Name="youhoo_BasicArchive_SupportWay" EntityType="Self.youhoo_BasicArchive_SupportWay" />
+          <EntitySet Name="youhoo_BasicArchive_time" EntityType="Self.youhoo_BasicArchive_time" />
+          <EntitySet Name="youhoo_rebate_RebatePolicy" EntityType="Self.youhoo_rebate_RebatePolicy" />
+          <EntitySet Name="youhoo_rebate_RebatePolicys" EntityType="Self.youhoo_rebate_RebatePolicys" />
+          <EntitySet Name="youhoo_rebate_RebateWay" EntityType="Self.youhoo_rebate_RebateWay" />
+          <EntitySet Name="youhoo_rebate_sale" EntityType="Self.youhoo_rebate_sale" />
+          <EntitySet Name="youhoo_sys_action" EntityType="Self.youhoo_sys_action" />
+          <EntitySet Name="youhoo_sys_Department" EntityType="Self.youhoo_sys_Department" />
+          <EntitySet Name="youhoo_sys_dictionary" EntityType="Self.youhoo_sys_dictionary" />
+          <EntitySet Name="youhoo_sys_dictionary_child" EntityType="Self.youhoo_sys_dictionary_child" />
+          <EntitySet Name="youhoo_sys_files" EntityType="Self.youhoo_sys_files" />
+          <EntitySet Name="youhoo_sys_module" EntityType="Self.youhoo_sys_module" />
+          <EntitySet Name="youhoo_sys_node" EntityType="Self.youhoo_sys_node" />
+          <EntitySet Name="youhoo_sys_power" EntityType="Self.youhoo_sys_power" />
+          <EntitySet Name="youhoo_sys_powergroup" EntityType="Self.youhoo_sys_powergroup" />
+          <EntitySet Name="Youhoo_sys_Process" EntityType="Self.Youhoo_sys_Process" />
+          <EntitySet Name="youhoo_sys_Result" EntityType="Self.youhoo_sys_Result" />
+          <EntitySet Name="youhoo_sys_store" EntityType="Self.youhoo_sys_store" />
+          <EntitySet Name="youhoo_sys_system_set" EntityType="Self.youhoo_sys_system_set" />
+          <EntitySet Name="youhoo_sys_users" EntityType="Self.youhoo_sys_users" />
+          <AssociationSet Name="FK_youhoo_rebate_RebatePolicys_youhoo_rebate_RebatePolicy" Association="Self.FK_youhoo_rebate_RebatePolicys_youhoo_rebate_RebatePolicy">
+            <End Role="youhoo_rebate_RebatePolicy" EntitySet="youhoo_rebate_RebatePolicy" />
+            <End Role="youhoo_rebate_RebatePolicys" EntitySet="youhoo_rebate_RebatePolicys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Node" Association="Self.FK_Process_Node">
+            <End Role="Youhoo_sys_Process" EntitySet="Youhoo_sys_Process" />
+            <End Role="youhoo_sys_node" EntitySet="youhoo_sys_node" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Process_Result" Association="Self.FK_Process_Result">
+            <End Role="Youhoo_sys_Process" EntitySet="Youhoo_sys_Process" />
+            <End Role="youhoo_sys_Result" EntitySet="youhoo_sys_Result" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KeChuangeModelStoreContainer" CdmEntityContainer="KeChuangeEntities">
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="KeChuangeModel.Logs">
+              <MappingFragment StoreEntitySet="Logs">
+                <ScalarProperty Name="log_id" ColumnName="log_id" />
+                <ScalarProperty Name="tablename" ColumnName="tablename" />
+                <ScalarProperty Name="olddata" ColumnName="olddata" />
+                <ScalarProperty Name="newdata" ColumnName="newdata" />
+                <ScalarProperty Name="datatype" ColumnName="datatype" />
+                <ScalarProperty Name="cname" ColumnName="cname" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_BasicArchive_brand">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_BasicArchive_brand">
+              <MappingFragment StoreEntitySet="youhoo_BasicArchive_brand">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_BasicArchive_channel">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_BasicArchive_channel">
+              <MappingFragment StoreEntitySet="youhoo_BasicArchive_channel">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_BasicArchive_item">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_BasicArchive_item">
+              <MappingFragment StoreEntitySet="youhoo_BasicArchive_item">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_BasicArchive_price">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_BasicArchive_price">
+              <MappingFragment StoreEntitySet="youhoo_BasicArchive_price">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_BasicArchive_region">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_BasicArchive_region">
+              <MappingFragment StoreEntitySet="youhoo_BasicArchive_region">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_BasicArchive_sort">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_BasicArchive_sort">
+              <MappingFragment StoreEntitySet="youhoo_BasicArchive_sort">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_BasicArchive_SupportPrice">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_BasicArchive_SupportPrice">
+              <MappingFragment StoreEntitySet="youhoo_BasicArchive_SupportPrice">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_BasicArchive_SupportWay">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_BasicArchive_SupportWay">
+              <MappingFragment StoreEntitySet="youhoo_BasicArchive_SupportWay">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_BasicArchive_time">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_BasicArchive_time">
+              <MappingFragment StoreEntitySet="youhoo_BasicArchive_time">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_rebate_RebatePolicy">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_rebate_RebatePolicy">
+              <MappingFragment StoreEntitySet="youhoo_rebate_RebatePolicy">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="channel_id" ColumnName="channel_id" />
+                <ScalarProperty Name="price_id" ColumnName="price_id" />
+                <ScalarProperty Name="region_id" ColumnName="region_id" />
+                <ScalarProperty Name="sort_id_id" ColumnName="sort_id_id" />
+                <ScalarProperty Name="SupportWay_id" ColumnName="SupportWay_id" />
+                <ScalarProperty Name="SupportPrice_id" ColumnName="SupportPrice_id" />
+                <ScalarProperty Name="RebateType_id" ColumnName="RebateType_id" />
+                <ScalarProperty Name="time_id" ColumnName="time_id" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_rebate_RebatePolicys">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_rebate_RebatePolicys">
+              <MappingFragment StoreEntitySet="youhoo_rebate_RebatePolicys">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Policy_id" ColumnName="Policy_id" />
+                <ScalarProperty Name="brand_id" ColumnName="brand_id" />
+                <ScalarProperty Name="DisCount" ColumnName="DisCount" />
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_rebate_RebateWay">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_rebate_RebateWay">
+              <MappingFragment StoreEntitySet="youhoo_rebate_RebateWay">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="rebate_type" ColumnName="rebate_type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_rebate_sale">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_rebate_sale">
+              <MappingFragment StoreEntitySet="youhoo_rebate_sale">
+                <ScalarProperty Name="Rebate_id" ColumnName="Rebate_id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_action">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_action">
+              <MappingFragment StoreEntitySet="youhoo_sys_action">
+                <ScalarProperty Name="action_id" ColumnName="action_id" />
+                <ScalarProperty Name="action_name" ColumnName="action_name" />
+                <ScalarProperty Name="action_value" ColumnName="action_value" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_Department">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_Department">
+              <MappingFragment StoreEntitySet="youhoo_sys_Department">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SubCode" ColumnName="SubCode" />
+                <ScalarProperty Name="SubName" ColumnName="SubName" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_dictionary">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_dictionary">
+              <MappingFragment StoreEntitySet="youhoo_sys_dictionary">
+                <ScalarProperty Name="dictionary_id" ColumnName="dictionary_id" />
+                <ScalarProperty Name="dictionary_name" ColumnName="dictionary_name" />
+                <ScalarProperty Name="is_multilayer" ColumnName="is_multilayer" />
+                <ScalarProperty Name="sort" ColumnName="sort" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_dictionary_child">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_dictionary_child">
+              <MappingFragment StoreEntitySet="youhoo_sys_dictionary_child">
+                <ScalarProperty Name="dictionary_child_id" ColumnName="dictionary_child_id" />
+                <ScalarProperty Name="dictionary_child_name" ColumnName="dictionary_child_name" />
+                <ScalarProperty Name="dictionary_id" ColumnName="dictionary_id" />
+                <ScalarProperty Name="parent_dictionary_child_id" ColumnName="parent_dictionary_child_id" />
+                <ScalarProperty Name="is_start" ColumnName="is_start" />
+                <ScalarProperty Name="sort" ColumnName="sort" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_files">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_files">
+              <MappingFragment StoreEntitySet="youhoo_sys_files">
+                <ScalarProperty Name="file_id" ColumnName="file_id" />
+                <ScalarProperty Name="table_id" ColumnName="table_id" />
+                <ScalarProperty Name="table_file_id" ColumnName="table_file_id" />
+                <ScalarProperty Name="file_name" ColumnName="file_name" />
+                <ScalarProperty Name="file_path" ColumnName="file_path" />
+                <ScalarProperty Name="file_size" ColumnName="file_size" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_module">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_module">
+              <MappingFragment StoreEntitySet="youhoo_sys_module">
+                <ScalarProperty Name="module_id" ColumnName="module_id" />
+                <ScalarProperty Name="module_name" ColumnName="module_name" />
+                <ScalarProperty Name="parentmodule_id" ColumnName="parentmodule_id" />
+                <ScalarProperty Name="module_url" ColumnName="module_url" />
+                <ScalarProperty Name="module_value" ColumnName="module_value" />
+                <ScalarProperty Name="sort" ColumnName="sort" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_node">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_node">
+              <MappingFragment StoreEntitySet="youhoo_sys_node">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NodeName" ColumnName="NodeName" />
+                <ScalarProperty Name="ProcessId" ColumnName="ProcessId" />
+                <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_power">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_power">
+              <MappingFragment StoreEntitySet="youhoo_sys_power">
+                <ScalarProperty Name="power_id" ColumnName="power_id" />
+                <ScalarProperty Name="module_id" ColumnName="module_id" />
+                <ScalarProperty Name="action_id" ColumnName="action_id" />
+                <ScalarProperty Name="power_value" ColumnName="power_value" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_powergroup">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_powergroup">
+              <MappingFragment StoreEntitySet="youhoo_sys_powergroup">
+                <ScalarProperty Name="powergroup_id" ColumnName="powergroup_id" />
+                <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+                <ScalarProperty Name="powergroup_name" ColumnName="powergroup_name" />
+                <ScalarProperty Name="powergroup_value" ColumnName="powergroup_value" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Youhoo_sys_Process">
+            <EntityTypeMapping TypeName="KeChuangeModel.Youhoo_sys_Process">
+              <MappingFragment StoreEntitySet="Youhoo_sys_Process">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_Result">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_Result">
+              <MappingFragment StoreEntitySet="youhoo_sys_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProcessId" ColumnName="ProcessId" />
+                <ScalarProperty Name="NodeId" ColumnName="NodeId" />
+                <ScalarProperty Name="ProcessStatus" ColumnName="ProcessStatus" />
+                <ScalarProperty Name="ProcessOpinion" ColumnName="ProcessOpinion" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_store">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_store">
+              <MappingFragment StoreEntitySet="youhoo_sys_store">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="SubCode" ColumnName="SubCode" />
+                <ScalarProperty Name="SubName" ColumnName="SubName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="PaymentTerm" ColumnName="PaymentTerm" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_system_set">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_system_set">
+              <MappingFragment StoreEntitySet="youhoo_sys_system_set">
+                <ScalarProperty Name="system_set_id" ColumnName="system_set_id" />
+                <ScalarProperty Name="system_set_name" ColumnName="system_set_name" />
+                <ScalarProperty Name="system_set_hou_logo" ColumnName="system_set_hou_logo" />
+                <ScalarProperty Name="system_set_login_biaozhi" ColumnName="system_set_login_biaozhi" />
+                <ScalarProperty Name="system_set_icon" ColumnName="system_set_icon" />
+                <ScalarProperty Name="initial_pwd" ColumnName="initial_pwd" />
+                <ScalarProperty Name="list_show_count" ColumnName="list_show_count" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="youhoo_sys_users">
+            <EntityTypeMapping TypeName="KeChuangeModel.youhoo_sys_users">
+              <MappingFragment StoreEntitySet="youhoo_sys_users">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="usercode" ColumnName="usercode" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="real_name" ColumnName="real_name" />
+                <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+                <ScalarProperty Name="departmentId" ColumnName="departmentId" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="powergroup_id" ColumnName="powergroup_id" />
+                <ScalarProperty Name="IsSaleMan" ColumnName="IsSaleMan" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="createoperator" ColumnName="createoperator" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="updateoperator" ColumnName="updateoperator" />
+                <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40C91EE6-30B4-49A4-B3F8-28265137588B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YouHoo.DataOperation</RootNamespace>
+    <AssemblyName>DataOperation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveBrandDAL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveChannelDAL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveItemDAL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchivePriceDAL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveRegionDAL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveSortDAL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveSupportpriceDAL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveSupportwayDAL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveTimeDAL.cs" />
+    <Compile Include="DBSqlServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REBATE\YouhooRebateRebatepolicyDAL.cs" />
+    <Compile Include="REBATE\YouhooRebateRebatewayDAL.cs" />
+    <Compile Include="REBATE\YouhooRebateSaleDAL.cs" />
+    <Compile Include="SYS\LogsDAL.cs" />
+    <Compile Include="SYS\YouhooSysActionDAL.cs" />
+    <Compile Include="SYS\YouhooSysDepartmentDAL.cs" />
+    <Compile Include="SYS\YouhooSysDictionaryChildDAL.cs" />
+    <Compile Include="SYS\YouhooSysDictionaryDAL.cs" />
+    <Compile Include="SYS\YouhooSysFilesDAL.cs" />
+    <Compile Include="SYS\YouhooSysModuleDAL.cs" />
+    <Compile Include="SYS\YouhooSysNodeDAL.cs" />
+    <Compile Include="SYS\YouhooSysPowerDAL.cs" />
+    <Compile Include="SYS\YouhooSysPowergroupDAL.cs" />
+    <Compile Include="SYS\YouhooSysProcessDAL.cs" />
+    <Compile Include="SYS\YouhooSysStoreDAL.cs" />
+    <Compile Include="SYS\YouhooSysSystemSetDAL.cs" />
+    <Compile Include="SYS\YouhooSysUsersDAL.cs" />
+    <Compile Include="VISIT\YouhooVisitRecordDAL.cs" />
+    <Compile Include="VISIT\YouhooVisitVisitwayDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{057F02E8-1385-4EB3-B926-89DED1CB880C}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataTools\DataTools.csproj">
+      <Project>{98652A40-1877-4499-972E-525AFA2EE2C7}</Project>
+      <Name>DataTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

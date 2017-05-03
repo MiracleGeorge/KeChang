@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Highcharts Example</title>
+
+    <script type="text/javascript" src="https://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+
+    <script src="https://cdn.hcharts.cn/highcharts/5.0.10/highcharts.js"></script>
+    <script src="https://cdn.hcharts.cn/highcharts/5.0.10/modules/exporting.js"></script>
+
+    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+    
+    <script type="text/javascript">
+
+        
+$(document).ready(function () {
+
+    
+    
+    // Build the chart
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: '这里是标题'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: '小明',
+                y: 10
+            }, {
+                name: '小红',
+                y: 20,
+                sliced: true,
+                selected: true
+            }, {
+                name: '小刚',
+                y: 30
+            }, {
+                name: '呵呵',
+                y: 10
+            }, {
+                name: '哈哈',
+                y: 20
+            }, {
+                name: '红红',
+                y: 10
+            }]
+        }]
+    });
+});
+    </script>
+</body>
+</html>

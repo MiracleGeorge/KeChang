@@ -1,0 +1,17 @@
+﻿/*横向菜单样式*/
+.cusTab .cusTab_top { position: fixed; top: 0px; left: 0px; z-index: 10; border-bottom: 1px solid #5ba2fc; width: 100%; height: 21px; padding-left: 15px; padding-top: 15px; background-color: #fff; box-shadow: 1px 1px 30px #ccc; }
+.cusTab .cusTab_top li { cursor: pointer; list-style: none; }
+.cusTab_con { overflow-y: auto; overflow-x: hidden; padding-top: 30px; }
+.cusTab_normal_left { background-image: url(normal_left.png); background-repeat: no-repeat; float: left; width: 17px; height: 21px; }
+.cusTab_normal_center { background-image: url(normal_center.jpg); background-repeat: repeat-x; float: left; height: 21px; padding: 0 10px 0 10px; }
+.cusTab_normal_center a { color: black; display: inline-block; height: 100%; }
+.cusTab_normal_center a:hover { color: black; text-decoration: none; }
+.cusTab_normal_middle { background-image: url(normal_middle.png); background-repeat: no-repeat; float: left; width: 18px; height: 21px; }
+.cusTab_normal_right { background-image: url(normal_right.png); background-repeat: no-repeat; float: left; width: 17px; height: 21px; }
+.cusTab_current_left { background-image: url(current_left.png) !important; width: 14px !important; }
+.cusTab_current_center { background-image: url(current_center.jpg) !important; }
+.cusTab_current_middle { background-image: url(current_middle.png) !important; width: 18px !important; }
+.cusTab_current_middle2 { background-image: url(current_middle2.png) !important; width: 16px !important; }
+.cusTab_current_right { background-image: url(current_right.png) !important; width: 14px !important; }
+.cusTab_content { padding: 3px 0 0 0; }
+.clear { clear: both; line-height: 1px; }

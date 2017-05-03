@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>页面不存在</title>
+    <link rel="Stylesheet" type="text/css" href="Css/css.css" />
+    <script type="text/javascript" src="/Js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        var time = 5;
+        var interval = setInterval(function () {
+            time--;
+            if (time == 0) {
+                location.href = "/";
+                clearInterval(interval);
+            }
+            else {
+                $(".prompt .special").text(time);
+            }
+        }, 1000)
+    </script>
+</head>
+<body>
+    <div class="content">
+        <p><span class="special" style="font-size: 38px;">404 Not Found</span></p>
+        <p>抱歉，您访问的页面不存在</p>
+        <p>请检查您输入的网址是否正确</p>
+        <p class="prompt"><span class="special">5</span> 秒后自动跳转到<a href="/">首页</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UFDATA_001_2017" Class="ufdataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=UFDATA_001_2017;User ID=sa" SettingsObjectName="YouHoo.DataBll.Properties.Settings" SettingsPropertyName="UFDATA_001_2017ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Customer" Member="Customer">
+    <Type Name="Customer">
+      <Column Name="cCusCode" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cCusName" Type="System.String" DbType="NVarChar(98)" CanBeNull="true" />
+      <Column Name="cCusAbbName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="cCCCode" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="cDCCode" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="cTrade" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cCusAddress" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cCusPostCode" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="cCusRegCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cCusBank" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="cCusAccount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="dCusDevDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="cCusLPerson" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="cCusEmail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="cCusPerson" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cCusPhone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="cCusFax" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="cCusBP" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusHand" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusPPerson" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="iCusDisRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cCusCreGrade" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Column Name="iCusCreLine" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="iCusCreDate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cCusPayCond" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusOAddress" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cCusOType" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="cCusHeadCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusWhCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="cCusDepart" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="iARMoney" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dLastDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="iLastMoney" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dLRDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="iLRMoney" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dEndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="iFrequency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cCusDefine1" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusDefine2" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusDefine3" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="iCostGrade" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="cCreatePerson" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cModifyPerson" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="dModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="cRelVendor" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="iId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cPriceGroup" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cOfferGrade" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="iOfferRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cCusDefine4" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="cCusDefine5" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="cCusDefine6" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="cCusDefine7" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="cCusDefine8" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="cCusDefine9" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="cCusDefine10" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="cCusDefine11" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cCusDefine12" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cCusDefine13" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cCusDefine14" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cCusDefine15" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="cCusDefine16" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="pubufts" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="cInvoiceCompany" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="bCredit" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="bCreditDate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="bCreditByHead" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="bLicenceDate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="dLicenceSDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dLicenceEDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="iLicenceADays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bBusinessDate" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="dBusinessSDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dBusinessEDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="iBusinessADays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bProxy" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="dProxySDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dProxyEDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="iProxyADays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cMemo" Type="System.String" DbType="NVarChar(240)" CanBeNull="true" />
+      <Column Name="bLimitSale" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="cCusContactCode" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="cCusCountryCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="cCusEnName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="cCusEnAddr1" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="cCusEnAddr2" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="cCusEnAddr3" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="cCusEnAddr4" Type="System.String" DbType="NVarChar(60)" CanBeNull="true" />
+      <Column Name="cCusPortCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="cPrimaryVen" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="fCommisionRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="fInsueRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="bHomeBranch" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="cBranchAddr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cBranchPhone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="cBranchPerson" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cCusTradeCCode" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="CustomerKCode" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="bCusState" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="bShop" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="cCusBankCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cCusExch_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="iCusGSPType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="iCusGSPAuth" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="cCusGSPAuthNo" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="cCusBusinessNo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusLicenceNo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="bCusDomestic" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="bCusOverseas" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="cCusCreditCompany" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusSAProtocol" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusExProtocol" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusOtherProtocol" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="fCusDiscountRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cCusSSCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cCusCMProtocol" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="dCusCreateDatetime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="cCusAppDocNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

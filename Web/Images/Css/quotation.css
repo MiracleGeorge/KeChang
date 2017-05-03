@@ -1,0 +1,9 @@
+﻿
+设置左侧伸缩的按钮样式
+.menu a { float: left; display: block; margin-right: 3px; font-size: 13px; margin-top: -2px; }
+.menu a div { float: left; height: 24px; line-height: 26px; background-repeat: no-repeat; background-position: 0px 0px; }
+.menu a .tab1 { width: 5px; background-image: url(../tab1.gif); }
+.menu a .tab2 { padding: 0px 5px; background-image: url(../tab2.gif); background-repeat: repeat-x; }
+.menu a .tab3 { width: 5px; background-image: url(../tab3.gif); }
+.menu a:hover div { background-position: 0px -42px; }
+.menu a.on div { background-position: 0px -84px; color: #fff; }

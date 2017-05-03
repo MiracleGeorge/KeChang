@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="KeChuange" Class="KechangDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=KeChuange;User ID=sa" SettingsObjectName="YouHoo.DataBll.Properties.Settings" SettingsPropertyName="KeChuangeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.youhoo_rebate_RebateWay" Member="youhoo_rebate_RebateWay">
+    <Type Name="youhoo_rebate_RebateWay">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rebate_type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_BasicArchive_brand" Member="youhoo_BasicArchive_brand">
+    <Type Name="youhoo_BasicArchive_brand">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_BasicArchive_channel" Member="youhoo_BasicArchive_channel">
+    <Type Name="youhoo_BasicArchive_channel">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_BasicArchive_item" Member="youhoo_BasicArchive_item">
+    <Type Name="youhoo_BasicArchive_item">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_BasicArchive_price" Member="youhoo_BasicArchive_price">
+    <Type Name="youhoo_BasicArchive_price">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_BasicArchive_region" Member="youhoo_BasicArchive_region">
+    <Type Name="youhoo_BasicArchive_region">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_BasicArchive_sort" Member="youhoo_BasicArchive_sort">
+    <Type Name="youhoo_BasicArchive_sort">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_BasicArchive_SupportPrice" Member="youhoo_BasicArchive_SupportPrice">
+    <Type Name="youhoo_BasicArchive_SupportPrice">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_BasicArchive_SupportWay" Member="youhoo_BasicArchive_SupportWay">
+    <Type Name="youhoo_BasicArchive_SupportWay">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_BasicArchive_time" Member="youhoo_BasicArchive_time">
+    <Type Name="youhoo_BasicArchive_time">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_rebate_RebatePolicy" Member="youhoo_rebate_RebatePolicy">
+    <Type Name="youhoo_rebate_RebatePolicy">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="channel_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="region_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sort_id_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SupportWay_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SupportPrice_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RebateType_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="time_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="youhoo_rebate_RebatePolicy_youhoo_rebate_RebatePolicys" Member="youhoo_rebate_RebatePolicys" ThisKey="id" OtherKey="Policy_id" Type="youhoo_rebate_RebatePolicys" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_rebate_RebatePolicys" Member="youhoo_rebate_RebatePolicys">
+    <Type Name="youhoo_rebate_RebatePolicys">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Policy_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="brand_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DisCount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="item_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="youhoo_rebate_RebatePolicy_youhoo_rebate_RebatePolicys" Member="youhoo_rebate_RebatePolicy" ThisKey="Policy_id" OtherKey="id" Type="youhoo_rebate_RebatePolicy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_RebatePolicy_Relation" Member="v_RebatePolicy_Relation">
+    <Type Name="v_RebatePolicy_Relation">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ChannelName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChannelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PriceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RegionName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SortName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SortId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SupportPriceName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SupportPriceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SupportWayName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SupportWayId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TimeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TimeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RebateWayName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RebateWayId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_RebatePolicys" Member="v_RebatePolicys">
+    <Type Name="v_RebatePolicys">
+      <Column Name="PolicyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PolicyName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PolicyCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="detailsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="brand_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="brandName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="brandCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="itemName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="itemCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DisCount" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
