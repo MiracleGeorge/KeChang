@@ -40,12 +40,9 @@ namespace YouHoo.Web.REBATE
                     txt_Code.Text =  model.Code;
                     txt_Name.Text = model.Name;
                     ddl_channel.SelectedValue = model.ChannelId.ToString();
-                    ddl_price.SelectedValue = model.PriceId.ToString();
                     ddl_rebateWay.SelectedValue = model.RebateWayId.ToString();
                     ddl_region.SelectedValue = model.RegionId.ToString();
                     ddl_sort.SelectedValue = model.SortId.ToString();
-                    //ddl_time.SelectedValue = model.TimeId.ToString();
-                    ddl_supportPrice .SelectedValue = model.SupportPriceId.ToString();
                     ddl_supportWay .SelectedValue = model.SupportWayId.ToString();
 
                     //txt_channel_id.Text = model.ChannelId != null ? model.ChannelId.ToString() : "";
@@ -124,12 +121,7 @@ namespace YouHoo.Web.REBATE
         }
         protected void BindData()
         {
-            //YouhooBasicarchiveBrandBLL bll = new YouhooBasicarchiveBrandBLL();
-            //ddl_brand.DataSource = bll.GetList("");
-            //ddl_brand.DataTextField = "Name"; 
-            //ddl_brand.DataValueField = "id";
-            //ddl_brand.DataBind();
-            //ddl_brand.Items.Insert(0, new ListItem("请选择", "0"));
+            
             //地区
             ddl_region.DataSource = new YouhooBasicarchiveRegionBLL().GetList("");
             ddl_region.DataTextField = "Name";
@@ -154,24 +146,12 @@ namespace YouHoo.Web.REBATE
             ddl_supportWay.DataValueField = "id";
             ddl_supportWay.DataBind();
             ddl_supportWay.Items.Insert(0, new ListItem("请选择", "0"));
-            //支持方式
-            ddl_supportPrice.DataSource = new YouhooBasicarchiveSupportpriceBLL().GetList("");
-            ddl_supportPrice.DataTextField = "Name";
-            ddl_supportPrice.DataValueField = "id";
-            ddl_supportPrice.DataBind();
-            ddl_supportPrice.Items.Insert(0, new ListItem("请选择", "0"));
-            //时段
-            //ddl_time.DataSource = new YouhooBasicarchiveTimeBLL().GetList("");
-            //ddl_time.DataTextField = "Name";
-            //ddl_time.DataValueField = "id";
-            //ddl_time.DataBind();
-            //ddl_time.Items.Insert(0, new ListItem("请选择", "0"));
-            //价格
-            ddl_price.DataSource = new YouhooBasicarchivePriceBLL().GetList("");
-            ddl_price.DataTextField = "Name";
-            ddl_price.DataValueField = "id";
-            ddl_price.DataBind();
-            ddl_price.Items.Insert(0, new ListItem("请选择", "0"));
+            //市区
+            ddl_town.DataSource = new YouhooBasicarchiveTownBLL().GetList("");
+            ddl_town.DataTextField = "Name";
+            ddl_town.DataValueField = "id";
+            ddl_town.DataBind();
+            ddl_town.Items.Insert(0, new ListItem("请选择", "0"));
             //返利方式
             ddl_rebateWay.DataSource = new YouhooRebateRebatewayBLL().GetList("");
             ddl_rebateWay.DataTextField = "Name";
@@ -207,22 +187,7 @@ namespace YouHoo.Web.REBATE
             {
                 policy.channel_id = null;
             }
-            //if (ddl_item.Text.Trim() != "")
-            //{
-            //    policy.ItemId = DataConvert.ToInt32(ddl_item.Text.Trim());
-            //}
-            //else
-            //{
-            //    policy.ItemId = null;
-            //}
-            if (ddl_price.Text.Trim() != "")
-            {
-                policy.price_id = DataConvert.ToInt32(ddl_price.Text.Trim());
-            }
-            else
-            {
-                policy.price_id = null;
-            }
+         
             if (ddl_region.Text.Trim() != "")
             {
                 policy.region_id = DataConvert.ToInt32(ddl_region.Text.Trim());
@@ -239,22 +204,25 @@ namespace YouHoo.Web.REBATE
             {
                 policy.sort_id_id = null;
             }
-            if (ddl_supportWay.Text.Trim() != "")
+
+            if (txt_startDate.Text.Trim() != null)
             {
-                policy.SupportWay_id = DataConvert.ToInt32(ddl_supportWay.Text.Trim());
+                policy.StartDate = DataConvert.ToDateTime(txt_startDate.Text);
             }
             else
             {
-                policy.SupportWay_id = null;
+                policy.StartDate = null;
             }
-            if (ddl_supportPrice.Text.Trim() != "")
+
+            if (txt_endDate.Text.Trim() != null)
             {
-                policy.SupportPrice_id = DataConvert.ToInt32(ddl_supportPrice.Text.Trim());
+                policy.EndDate = DataConvert.ToDateTime(txt_startDate.Text);
             }
             else
             {
-                policy.SupportPrice_id = null;
+                policy.EndDate = null;
             }
+
             if (ddl_rebateWay.Text.Trim() != "")
             {
                 policy.RebateType_id = DataConvert.ToInt32(ddl_rebateWay.Text.Trim());
@@ -263,14 +231,6 @@ namespace YouHoo.Web.REBATE
             {
                 policy.RebateType_id = null;
             }
-            //if (ddl_time.Text.Trim() != "")
-            //{
-            //    policy.time_id = DataConvert.ToInt32(ddl_time.Text.Trim());
-            //}
-            //else
-            //{
-            //    policy.time_id = null;
-            //}
             #endregion
             if (requestId == "")//新增
             {
@@ -299,8 +259,7 @@ namespace YouHoo.Web.REBATE
                     //关闭并刷新页面
                     PublicPrompt.CloseDialogAndRefresh(this);
                 }
-
-     
+                
                 #endregion
             }
             else//修改

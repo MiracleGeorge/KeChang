@@ -60,12 +60,12 @@ namespace YouHoo.DataBll.REBATE
     partial void Insertyouhoo_BasicArchive_time(youhoo_BasicArchive_time instance);
     partial void Updateyouhoo_BasicArchive_time(youhoo_BasicArchive_time instance);
     partial void Deleteyouhoo_BasicArchive_time(youhoo_BasicArchive_time instance);
-    partial void Insertyouhoo_rebate_RebatePolicy(youhoo_rebate_RebatePolicy instance);
-    partial void Updateyouhoo_rebate_RebatePolicy(youhoo_rebate_RebatePolicy instance);
-    partial void Deleteyouhoo_rebate_RebatePolicy(youhoo_rebate_RebatePolicy instance);
     partial void Insertyouhoo_rebate_RebatePolicys(youhoo_rebate_RebatePolicys instance);
     partial void Updateyouhoo_rebate_RebatePolicys(youhoo_rebate_RebatePolicys instance);
     partial void Deleteyouhoo_rebate_RebatePolicys(youhoo_rebate_RebatePolicys instance);
+    partial void Insertyouhoo_rebate_RebatePolicy(youhoo_rebate_RebatePolicy instance);
+    partial void Updateyouhoo_rebate_RebatePolicy(youhoo_rebate_RebatePolicy instance);
+    partial void Deleteyouhoo_rebate_RebatePolicy(youhoo_rebate_RebatePolicy instance);
     #endregion
 		
 		public KechangDataContext() : 
@@ -178,14 +178,6 @@ namespace YouHoo.DataBll.REBATE
 			}
 		}
 		
-		public System.Data.Linq.Table<youhoo_rebate_RebatePolicy> youhoo_rebate_RebatePolicy
-		{
-			get
-			{
-				return this.GetTable<youhoo_rebate_RebatePolicy>();
-			}
-		}
-		
 		public System.Data.Linq.Table<youhoo_rebate_RebatePolicys> youhoo_rebate_RebatePolicys
 		{
 			get
@@ -207,6 +199,14 @@ namespace YouHoo.DataBll.REBATE
 			get
 			{
 				return this.GetTable<v_RebatePolicys>();
+			}
+		}
+		
+		public System.Data.Linq.Table<youhoo_rebate_RebatePolicy> youhoo_rebate_RebatePolicy
+		{
+			get
+			{
+				return this.GetTable<youhoo_rebate_RebatePolicy>();
 			}
 		}
 	}
@@ -3015,504 +3015,6 @@ namespace YouHoo.DataBll.REBATE
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.youhoo_rebate_RebatePolicy")]
-	public partial class youhoo_rebate_RebatePolicy : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _Code;
-		
-		private string _Name;
-		
-		private System.Nullable<int> _channel_id;
-		
-		private System.Nullable<int> _price_id;
-		
-		private System.Nullable<int> _region_id;
-		
-		private System.Nullable<int> _sort_id_id;
-		
-		private System.Nullable<int> _SupportWay_id;
-		
-		private System.Nullable<int> _SupportPrice_id;
-		
-		private System.Nullable<int> _RebateType_id;
-		
-		private System.Nullable<int> _time_id;
-		
-		private string _remark;
-		
-		private System.Nullable<int> _flag;
-		
-		private int _user_id;
-		
-		private string _createoperator;
-		
-		private System.Nullable<System.DateTime> _createdate;
-		
-		private string _updateoperator;
-		
-		private System.Nullable<System.DateTime> _updatedate;
-		
-		private EntitySet<youhoo_rebate_RebatePolicys> _youhoo_rebate_RebatePolicys;
-		
-    #region 可扩展性方法定义
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnCodeChanging(string value);
-    partial void OnCodeChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void Onchannel_idChanging(System.Nullable<int> value);
-    partial void Onchannel_idChanged();
-    partial void Onprice_idChanging(System.Nullable<int> value);
-    partial void Onprice_idChanged();
-    partial void Onregion_idChanging(System.Nullable<int> value);
-    partial void Onregion_idChanged();
-    partial void Onsort_id_idChanging(System.Nullable<int> value);
-    partial void Onsort_id_idChanged();
-    partial void OnSupportWay_idChanging(System.Nullable<int> value);
-    partial void OnSupportWay_idChanged();
-    partial void OnSupportPrice_idChanging(System.Nullable<int> value);
-    partial void OnSupportPrice_idChanged();
-    partial void OnRebateType_idChanging(System.Nullable<int> value);
-    partial void OnRebateType_idChanged();
-    partial void Ontime_idChanging(System.Nullable<int> value);
-    partial void Ontime_idChanged();
-    partial void OnremarkChanging(string value);
-    partial void OnremarkChanged();
-    partial void OnflagChanging(System.Nullable<int> value);
-    partial void OnflagChanged();
-    partial void Onuser_idChanging(int value);
-    partial void Onuser_idChanged();
-    partial void OncreateoperatorChanging(string value);
-    partial void OncreateoperatorChanged();
-    partial void OncreatedateChanging(System.Nullable<System.DateTime> value);
-    partial void OncreatedateChanged();
-    partial void OnupdateoperatorChanging(string value);
-    partial void OnupdateoperatorChanged();
-    partial void OnupdatedateChanging(System.Nullable<System.DateTime> value);
-    partial void OnupdatedateChanged();
-    #endregion
-		
-		public youhoo_rebate_RebatePolicy()
-		{
-			this._youhoo_rebate_RebatePolicys = new EntitySet<youhoo_rebate_RebatePolicys>(new Action<youhoo_rebate_RebatePolicys>(this.attach_youhoo_rebate_RebatePolicys), new Action<youhoo_rebate_RebatePolicys>(this.detach_youhoo_rebate_RebatePolicys));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Code
-		{
-			get
-			{
-				return this._Code;
-			}
-			set
-			{
-				if ((this._Code != value))
-				{
-					this.OnCodeChanging(value);
-					this.SendPropertyChanging();
-					this._Code = value;
-					this.SendPropertyChanged("Code");
-					this.OnCodeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_channel_id", DbType="Int")]
-		public System.Nullable<int> channel_id
-		{
-			get
-			{
-				return this._channel_id;
-			}
-			set
-			{
-				if ((this._channel_id != value))
-				{
-					this.Onchannel_idChanging(value);
-					this.SendPropertyChanging();
-					this._channel_id = value;
-					this.SendPropertyChanged("channel_id");
-					this.Onchannel_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price_id", DbType="Int")]
-		public System.Nullable<int> price_id
-		{
-			get
-			{
-				return this._price_id;
-			}
-			set
-			{
-				if ((this._price_id != value))
-				{
-					this.Onprice_idChanging(value);
-					this.SendPropertyChanging();
-					this._price_id = value;
-					this.SendPropertyChanged("price_id");
-					this.Onprice_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_region_id", DbType="Int")]
-		public System.Nullable<int> region_id
-		{
-			get
-			{
-				return this._region_id;
-			}
-			set
-			{
-				if ((this._region_id != value))
-				{
-					this.Onregion_idChanging(value);
-					this.SendPropertyChanging();
-					this._region_id = value;
-					this.SendPropertyChanged("region_id");
-					this.Onregion_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sort_id_id", DbType="Int")]
-		public System.Nullable<int> sort_id_id
-		{
-			get
-			{
-				return this._sort_id_id;
-			}
-			set
-			{
-				if ((this._sort_id_id != value))
-				{
-					this.Onsort_id_idChanging(value);
-					this.SendPropertyChanging();
-					this._sort_id_id = value;
-					this.SendPropertyChanged("sort_id_id");
-					this.Onsort_id_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupportWay_id", DbType="Int")]
-		public System.Nullable<int> SupportWay_id
-		{
-			get
-			{
-				return this._SupportWay_id;
-			}
-			set
-			{
-				if ((this._SupportWay_id != value))
-				{
-					this.OnSupportWay_idChanging(value);
-					this.SendPropertyChanging();
-					this._SupportWay_id = value;
-					this.SendPropertyChanged("SupportWay_id");
-					this.OnSupportWay_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupportPrice_id", DbType="Int")]
-		public System.Nullable<int> SupportPrice_id
-		{
-			get
-			{
-				return this._SupportPrice_id;
-			}
-			set
-			{
-				if ((this._SupportPrice_id != value))
-				{
-					this.OnSupportPrice_idChanging(value);
-					this.SendPropertyChanging();
-					this._SupportPrice_id = value;
-					this.SendPropertyChanged("SupportPrice_id");
-					this.OnSupportPrice_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RebateType_id", DbType="Int")]
-		public System.Nullable<int> RebateType_id
-		{
-			get
-			{
-				return this._RebateType_id;
-			}
-			set
-			{
-				if ((this._RebateType_id != value))
-				{
-					this.OnRebateType_idChanging(value);
-					this.SendPropertyChanging();
-					this._RebateType_id = value;
-					this.SendPropertyChanged("RebateType_id");
-					this.OnRebateType_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_time_id", DbType="Int")]
-		public System.Nullable<int> time_id
-		{
-			get
-			{
-				return this._time_id;
-			}
-			set
-			{
-				if ((this._time_id != value))
-				{
-					this.Ontime_idChanging(value);
-					this.SendPropertyChanging();
-					this._time_id = value;
-					this.SendPropertyChanged("time_id");
-					this.Ontime_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_remark", DbType="NText", UpdateCheck=UpdateCheck.Never)]
-		public string remark
-		{
-			get
-			{
-				return this._remark;
-			}
-			set
-			{
-				if ((this._remark != value))
-				{
-					this.OnremarkChanging(value);
-					this.SendPropertyChanging();
-					this._remark = value;
-					this.SendPropertyChanged("remark");
-					this.OnremarkChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_flag", DbType="Int")]
-		public System.Nullable<int> flag
-		{
-			get
-			{
-				return this._flag;
-			}
-			set
-			{
-				if ((this._flag != value))
-				{
-					this.OnflagChanging(value);
-					this.SendPropertyChanging();
-					this._flag = value;
-					this.SendPropertyChanged("flag");
-					this.OnflagChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_id", DbType="Int NOT NULL")]
-		public int user_id
-		{
-			get
-			{
-				return this._user_id;
-			}
-			set
-			{
-				if ((this._user_id != value))
-				{
-					this.Onuser_idChanging(value);
-					this.SendPropertyChanging();
-					this._user_id = value;
-					this.SendPropertyChanged("user_id");
-					this.Onuser_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_createoperator", DbType="NVarChar(50)")]
-		public string createoperator
-		{
-			get
-			{
-				return this._createoperator;
-			}
-			set
-			{
-				if ((this._createoperator != value))
-				{
-					this.OncreateoperatorChanging(value);
-					this.SendPropertyChanging();
-					this._createoperator = value;
-					this.SendPropertyChanged("createoperator");
-					this.OncreateoperatorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_createdate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> createdate
-		{
-			get
-			{
-				return this._createdate;
-			}
-			set
-			{
-				if ((this._createdate != value))
-				{
-					this.OncreatedateChanging(value);
-					this.SendPropertyChanging();
-					this._createdate = value;
-					this.SendPropertyChanged("createdate");
-					this.OncreatedateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_updateoperator", DbType="NVarChar(50)")]
-		public string updateoperator
-		{
-			get
-			{
-				return this._updateoperator;
-			}
-			set
-			{
-				if ((this._updateoperator != value))
-				{
-					this.OnupdateoperatorChanging(value);
-					this.SendPropertyChanging();
-					this._updateoperator = value;
-					this.SendPropertyChanged("updateoperator");
-					this.OnupdateoperatorChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_updatedate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> updatedate
-		{
-			get
-			{
-				return this._updatedate;
-			}
-			set
-			{
-				if ((this._updatedate != value))
-				{
-					this.OnupdatedateChanging(value);
-					this.SendPropertyChanging();
-					this._updatedate = value;
-					this.SendPropertyChanged("updatedate");
-					this.OnupdatedateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="youhoo_rebate_RebatePolicy_youhoo_rebate_RebatePolicys", Storage="_youhoo_rebate_RebatePolicys", ThisKey="id", OtherKey="Policy_id")]
-		public EntitySet<youhoo_rebate_RebatePolicys> youhoo_rebate_RebatePolicys
-		{
-			get
-			{
-				return this._youhoo_rebate_RebatePolicys;
-			}
-			set
-			{
-				this._youhoo_rebate_RebatePolicys.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_youhoo_rebate_RebatePolicys(youhoo_rebate_RebatePolicys entity)
-		{
-			this.SendPropertyChanging();
-			entity.youhoo_rebate_RebatePolicy = this;
-		}
-		
-		private void detach_youhoo_rebate_RebatePolicys(youhoo_rebate_RebatePolicys entity)
-		{
-			this.SendPropertyChanging();
-			entity.youhoo_rebate_RebatePolicy = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.youhoo_rebate_RebatePolicys")]
 	public partial class youhoo_rebate_RebatePolicys : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -4453,6 +3955,504 @@ namespace YouHoo.DataBll.REBATE
 					this._DisCount = value;
 				}
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.youhoo_rebate_RebatePolicy")]
+	public partial class youhoo_rebate_RebatePolicy : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _Code;
+		
+		private string _Name;
+		
+		private System.Nullable<int> _channel_id;
+		
+		private System.Nullable<double> _price;
+		
+		private System.Nullable<int> _region_id;
+		
+		private System.Nullable<int> _sort_id_id;
+		
+		private System.Nullable<int> _PayWay_id;
+		
+		private System.Nullable<int> _RebateType_id;
+		
+		private System.Nullable<System.DateTime> _EndDate;
+		
+		private System.Nullable<System.DateTime> _StartDate;
+		
+		private string _remark;
+		
+		private System.Nullable<int> _flag;
+		
+		private int _user_id;
+		
+		private string _createoperator;
+		
+		private System.Nullable<System.DateTime> _createdate;
+		
+		private string _updateoperator;
+		
+		private System.Nullable<System.DateTime> _updatedate;
+		
+		private EntitySet<youhoo_rebate_RebatePolicys> _youhoo_rebate_RebatePolicys;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnCodeChanging(string value);
+    partial void OnCodeChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void Onchannel_idChanging(System.Nullable<int> value);
+    partial void Onchannel_idChanged();
+    partial void OnpriceChanging(System.Nullable<double> value);
+    partial void OnpriceChanged();
+    partial void Onregion_idChanging(System.Nullable<int> value);
+    partial void Onregion_idChanged();
+    partial void Onsort_id_idChanging(System.Nullable<int> value);
+    partial void Onsort_id_idChanged();
+    partial void OnPayWay_idChanging(System.Nullable<int> value);
+    partial void OnPayWay_idChanged();
+    partial void OnRebateType_idChanging(System.Nullable<int> value);
+    partial void OnRebateType_idChanged();
+    partial void OnEndDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnEndDateChanged();
+    partial void OnStartDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnStartDateChanged();
+    partial void OnremarkChanging(string value);
+    partial void OnremarkChanged();
+    partial void OnflagChanging(System.Nullable<int> value);
+    partial void OnflagChanged();
+    partial void Onuser_idChanging(int value);
+    partial void Onuser_idChanged();
+    partial void OncreateoperatorChanging(string value);
+    partial void OncreateoperatorChanged();
+    partial void OncreatedateChanging(System.Nullable<System.DateTime> value);
+    partial void OncreatedateChanged();
+    partial void OnupdateoperatorChanging(string value);
+    partial void OnupdateoperatorChanged();
+    partial void OnupdatedateChanging(System.Nullable<System.DateTime> value);
+    partial void OnupdatedateChanged();
+    #endregion
+		
+		public youhoo_rebate_RebatePolicy()
+		{
+			this._youhoo_rebate_RebatePolicys = new EntitySet<youhoo_rebate_RebatePolicys>(new Action<youhoo_rebate_RebatePolicys>(this.attach_youhoo_rebate_RebatePolicys), new Action<youhoo_rebate_RebatePolicys>(this.detach_youhoo_rebate_RebatePolicys));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Code
+		{
+			get
+			{
+				return this._Code;
+			}
+			set
+			{
+				if ((this._Code != value))
+				{
+					this.OnCodeChanging(value);
+					this.SendPropertyChanging();
+					this._Code = value;
+					this.SendPropertyChanged("Code");
+					this.OnCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_channel_id", DbType="Int")]
+		public System.Nullable<int> channel_id
+		{
+			get
+			{
+				return this._channel_id;
+			}
+			set
+			{
+				if ((this._channel_id != value))
+				{
+					this.Onchannel_idChanging(value);
+					this.SendPropertyChanging();
+					this._channel_id = value;
+					this.SendPropertyChanged("channel_id");
+					this.Onchannel_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="Float")]
+		public System.Nullable<double> price
+		{
+			get
+			{
+				return this._price;
+			}
+			set
+			{
+				if ((this._price != value))
+				{
+					this.OnpriceChanging(value);
+					this.SendPropertyChanging();
+					this._price = value;
+					this.SendPropertyChanged("price");
+					this.OnpriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_region_id", DbType="Int")]
+		public System.Nullable<int> region_id
+		{
+			get
+			{
+				return this._region_id;
+			}
+			set
+			{
+				if ((this._region_id != value))
+				{
+					this.Onregion_idChanging(value);
+					this.SendPropertyChanging();
+					this._region_id = value;
+					this.SendPropertyChanged("region_id");
+					this.Onregion_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sort_id_id", DbType="Int")]
+		public System.Nullable<int> sort_id_id
+		{
+			get
+			{
+				return this._sort_id_id;
+			}
+			set
+			{
+				if ((this._sort_id_id != value))
+				{
+					this.Onsort_id_idChanging(value);
+					this.SendPropertyChanging();
+					this._sort_id_id = value;
+					this.SendPropertyChanged("sort_id_id");
+					this.Onsort_id_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PayWay_id", DbType="Int")]
+		public System.Nullable<int> PayWay_id
+		{
+			get
+			{
+				return this._PayWay_id;
+			}
+			set
+			{
+				if ((this._PayWay_id != value))
+				{
+					this.OnPayWay_idChanging(value);
+					this.SendPropertyChanging();
+					this._PayWay_id = value;
+					this.SendPropertyChanged("PayWay_id");
+					this.OnPayWay_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RebateType_id", DbType="Int")]
+		public System.Nullable<int> RebateType_id
+		{
+			get
+			{
+				return this._RebateType_id;
+			}
+			set
+			{
+				if ((this._RebateType_id != value))
+				{
+					this.OnRebateType_idChanging(value);
+					this.SendPropertyChanging();
+					this._RebateType_id = value;
+					this.SendPropertyChanged("RebateType_id");
+					this.OnRebateType_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndDate", DbType="Date")]
+		public System.Nullable<System.DateTime> EndDate
+		{
+			get
+			{
+				return this._EndDate;
+			}
+			set
+			{
+				if ((this._EndDate != value))
+				{
+					this.OnEndDateChanging(value);
+					this.SendPropertyChanging();
+					this._EndDate = value;
+					this.SendPropertyChanged("EndDate");
+					this.OnEndDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartDate", DbType="Date")]
+		public System.Nullable<System.DateTime> StartDate
+		{
+			get
+			{
+				return this._StartDate;
+			}
+			set
+			{
+				if ((this._StartDate != value))
+				{
+					this.OnStartDateChanging(value);
+					this.SendPropertyChanging();
+					this._StartDate = value;
+					this.SendPropertyChanged("StartDate");
+					this.OnStartDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_remark", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string remark
+		{
+			get
+			{
+				return this._remark;
+			}
+			set
+			{
+				if ((this._remark != value))
+				{
+					this.OnremarkChanging(value);
+					this.SendPropertyChanging();
+					this._remark = value;
+					this.SendPropertyChanged("remark");
+					this.OnremarkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_flag", DbType="Int")]
+		public System.Nullable<int> flag
+		{
+			get
+			{
+				return this._flag;
+			}
+			set
+			{
+				if ((this._flag != value))
+				{
+					this.OnflagChanging(value);
+					this.SendPropertyChanging();
+					this._flag = value;
+					this.SendPropertyChanged("flag");
+					this.OnflagChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_id", DbType="Int NOT NULL")]
+		public int user_id
+		{
+			get
+			{
+				return this._user_id;
+			}
+			set
+			{
+				if ((this._user_id != value))
+				{
+					this.Onuser_idChanging(value);
+					this.SendPropertyChanging();
+					this._user_id = value;
+					this.SendPropertyChanged("user_id");
+					this.Onuser_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_createoperator", DbType="NVarChar(50)")]
+		public string createoperator
+		{
+			get
+			{
+				return this._createoperator;
+			}
+			set
+			{
+				if ((this._createoperator != value))
+				{
+					this.OncreateoperatorChanging(value);
+					this.SendPropertyChanging();
+					this._createoperator = value;
+					this.SendPropertyChanged("createoperator");
+					this.OncreateoperatorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_createdate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> createdate
+		{
+			get
+			{
+				return this._createdate;
+			}
+			set
+			{
+				if ((this._createdate != value))
+				{
+					this.OncreatedateChanging(value);
+					this.SendPropertyChanging();
+					this._createdate = value;
+					this.SendPropertyChanged("createdate");
+					this.OncreatedateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_updateoperator", DbType="NVarChar(50)")]
+		public string updateoperator
+		{
+			get
+			{
+				return this._updateoperator;
+			}
+			set
+			{
+				if ((this._updateoperator != value))
+				{
+					this.OnupdateoperatorChanging(value);
+					this.SendPropertyChanging();
+					this._updateoperator = value;
+					this.SendPropertyChanged("updateoperator");
+					this.OnupdateoperatorChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_updatedate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> updatedate
+		{
+			get
+			{
+				return this._updatedate;
+			}
+			set
+			{
+				if ((this._updatedate != value))
+				{
+					this.OnupdatedateChanging(value);
+					this.SendPropertyChanging();
+					this._updatedate = value;
+					this.SendPropertyChanged("updatedate");
+					this.OnupdatedateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="youhoo_rebate_RebatePolicy_youhoo_rebate_RebatePolicys", Storage="_youhoo_rebate_RebatePolicys", ThisKey="id", OtherKey="Policy_id")]
+		public EntitySet<youhoo_rebate_RebatePolicys> youhoo_rebate_RebatePolicys
+		{
+			get
+			{
+				return this._youhoo_rebate_RebatePolicys;
+			}
+			set
+			{
+				this._youhoo_rebate_RebatePolicys.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_youhoo_rebate_RebatePolicys(youhoo_rebate_RebatePolicys entity)
+		{
+			this.SendPropertyChanging();
+			entity.youhoo_rebate_RebatePolicy = this;
+		}
+		
+		private void detach_youhoo_rebate_RebatePolicys(youhoo_rebate_RebatePolicys entity)
+		{
+			this.SendPropertyChanging();
+			entity.youhoo_rebate_RebatePolicy = null;
 		}
 	}
 }

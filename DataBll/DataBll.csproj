@@ -58,6 +58,7 @@
     <Compile Include="BASICARCHIVE\YouhooBasicarchiveSupportpriceBLL.cs" />
     <Compile Include="BASICARCHIVE\YouhooBasicarchiveSupportwayBLL.cs" />
     <Compile Include="BASICARCHIVE\YouhooBasicarchiveTimeBLL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveTownBLL.cs" />
     <Compile Include="BLLBase.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

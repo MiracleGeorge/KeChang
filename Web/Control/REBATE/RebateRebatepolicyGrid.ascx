@@ -86,7 +86,7 @@
 				<td align="center">
 					<%--<label class="lbl_ajaxUpdate"><%# Eval("PriceName")%></label>
 					<input type="text" class="validate[custom[onlyNumber]] txt_ajaxUpdate" field="PriceId" value="<%# Eval("price_id")%>" />--%>
-                    <label><%# Eval("PriceName")%></label>
+                    <label><%# Eval("price")%></label>
 				</td>
 				<td align="center">
 					<%--<label class="lbl_ajaxUpdate"><%# Eval("RegionName")%></label>
@@ -104,24 +104,9 @@
                     <label><%# Eval("SortName")%></label>
 				</td>
 				<td align="center">
-				<%--	<label class="lbl_ajaxUpdate"><%# Eval("SupportWayName")%></label>
-					<input type="text" class="validate[custom[onlyNumber]] txt_ajaxUpdate" field="SupportwayId" value="<%# Eval("SupportWay_id")%>" />--%>
-                    <label ><%# Eval("SupportWayName")%></label>
-				</td>
-				<td align="center">
-					<%--<label class="lbl_ajaxUpdate"><%# Eval("SupportPriceName")%></label>
-					<input type="text" class="validate[custom[onlyNumber]] txt_ajaxUpdate" field="SupportpriceId" value="<%# Eval("SupportPrice_id")%>" />--%>
-                    <label><%# Eval("SupportPriceName")%></label>
-				</td>
-				<td align="center">
 					<%--<label class="lbl_ajaxUpdate"><%# Eval("RebateWayName")%></label>
 					<input type="text" class="validate[custom[onlyNumber]] txt_ajaxUpdate" field="RebatetypeId" value="<%# Eval("RebateType_id")%>" />--%>
                     <label><%# Eval("RebateWayName")%></label>
-				</td>
-				<td align="center">
-					<%--<label class="lbl_ajaxUpdate"><%# Eval("TimeName")%></label>
-					<input type="text" class="validate[custom[onlyNumber]] txt_ajaxUpdate" field="TimeId" value="<%# Eval("time_id")%>" />--%>
-                    <label><%# Eval("TimeName")%></label>
 				</td>
 				<td align="center" class="operate">
 					<a href="javascript:dialogDetail('/REBATE/RebateRebatepolicyDetail.aspx?PageIndex=<%#PageIndex %>&ReturnUrl=<%=DataRequest.UrlEncode(Request.RawUrl) %>&id=<%# Eval("id") %>')">²é¿´</a>

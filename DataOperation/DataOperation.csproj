@@ -58,6 +58,7 @@
     <Compile Include="BASICARCHIVE\YouhooBasicarchiveSupportpriceDAL.cs" />
     <Compile Include="BASICARCHIVE\YouhooBasicarchiveSupportwayDAL.cs" />
     <Compile Include="BASICARCHIVE\YouhooBasicarchiveTimeDAL.cs" />
+    <Compile Include="BASICARCHIVE\YouhooBasicarchiveTownDAL.cs" />
     <Compile Include="DBSqlServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="REBATE\YouhooRebateRebatepolicyDAL.cs" />

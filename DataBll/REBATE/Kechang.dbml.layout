@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.375, 12.75" name="Kechang">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16, 13.25" name="Kechang">
   <DataContextMoniker Name="/KechangDataContext" />
   <nestedChildShapes>
     <classShape Id="1c045cd5-8336-4fc4-80f3-db8dee2944a3" absoluteBounds="3.875, 1, 2, 2.8308638509114576">
@@ -8,10 +8,10 @@
         <elementListCompartment Id="04169e01-47f9-477e-aab6-8175d6133b77" absoluteBounds="3.89, 1.46, 1.9700000000000002, 2.270863850911458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="4147e8ce-b48e-4ba7-9244-3c417cbe8f1d" absoluteBounds="0.75, 4.75, 2, 2.6460697428385416">
+    <classShape Id="4147e8ce-b48e-4ba7-9244-3c417cbe8f1d" absoluteBounds="0.625, 5.5, 2, 2.6460697428385416">
       <DataClassMoniker Name="/KechangDataContext/youhoo_BasicArchive_brand" />
       <nestedChildShapes>
-        <elementListCompartment Id="ce61e471-5ee9-41f4-a911-7262efb1bf86" absoluteBounds="0.765, 5.21, 1.9700000000000002, 2.0860697428385415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ce61e471-5ee9-41f4-a911-7262efb1bf86" absoluteBounds="0.64, 5.96, 1.9700000000000002, 2.0860697428385415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="68744aa9-722f-4105-8545-c8125eb979f0" absoluteBounds="3.75, 4.75, 2, 2.6460697428385416">
@@ -62,29 +62,16 @@
         <elementListCompartment Id="d09466f0-c97e-422b-9b5b-03b8cb885ede" absoluteBounds="9.765, 5.21, 2.8449999999999998, 2.0860697428385415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="0c3d34aa-f836-451a-88ee-f9b2902a0d8d" absoluteBounds="12.75, 8, 2, 4.1244226074218746">
-      <DataClassMoniker Name="/KechangDataContext/youhoo_rebate_RebatePolicy" />
-      <nestedChildShapes>
-        <elementListCompartment Id="2799f3a8-c767-4cf0-b55f-48ef02144508" absoluteBounds="12.765, 8.46, 1.9700000000000002, 3.564422607421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="53b493fe-ae62-4ef1-80ff-e72dc5d397a8" absoluteBounds="9.5, 9.5, 2, 3.0156579589843751">
       <DataClassMoniker Name="/KechangDataContext/youhoo_rebate_RebatePolicys" />
       <nestedChildShapes>
         <elementListCompartment Id="81890c2a-a83a-416c-8d90-11ccc5502036" absoluteBounds="9.515, 9.96, 1.9700000000000002, 2.455657958984375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(12.75 : 10.8122113037109); (11.5 : 10.8122113037109)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-      <AssociationMoniker Name="/KechangDataContext/youhoo_rebate_RebatePolicy/youhoo_rebate_RebatePolicy_youhoo_rebate_RebatePolicys" />
-      <nodes>
-        <classShapeMoniker Id="0c3d34aa-f836-451a-88ee-f9b2902a0d8d" />
-        <classShapeMoniker Id="53b493fe-ae62-4ef1-80ff-e72dc5d397a8" />
-      </nodes>
-    </associationConnector>
-    <classShape Id="eb496d3a-4321-4639-a396-059815a913db" absoluteBounds="1.375, 0.5, 2, 4.4940108235677076">
+    <classShape Id="eb496d3a-4321-4639-a396-059815a913db" absoluteBounds="1.25, 0.5, 2, 4.4940108235677076">
       <DataClassMoniker Name="/KechangDataContext/v_RebatePolicy_Relation" />
       <nestedChildShapes>
-        <elementListCompartment Id="fd7557d2-9cc0-48d5-9865-2d8d8a51fdb5" absoluteBounds="1.3899999999999997, 0.96, 1.9700000000000002, 3.934010823567708" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fd7557d2-9cc0-48d5-9865-2d8d8a51fdb5" absoluteBounds="1.2649999999999997, 0.96, 1.9700000000000002, 3.934010823567708" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="40f77c1a-a3ac-4f77-aed1-d658058cee68" absoluteBounds="13.125, 5, 2, 2.8308638509114581">
@@ -93,5 +80,18 @@
         <elementListCompartment Id="bc3ccb68-62c6-4ee0-a558-fab99c00cc37" absoluteBounds="13.14, 5.46, 1.9700000000000002, 2.270863850911458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="2e203563-38a3-48a0-997c-90e2a0718d8b" absoluteBounds="13.75, 8.875, 2, 4.1244226074218746">
+      <DataClassMoniker Name="/KechangDataContext/youhoo_rebate_RebatePolicy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72014aec-f1dc-4a7c-bfd2-1535603e3d3c" absoluteBounds="13.765, 9.335, 1.9700000000000002, 3.564422607421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.75 : 11.0078289794922); (11.5 : 11.0078289794922)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KechangDataContext/youhoo_rebate_RebatePolicy/youhoo_rebate_RebatePolicy_youhoo_rebate_RebatePolicys" />
+      <nodes>
+        <classShapeMoniker Id="2e203563-38a3-48a0-997c-90e2a0718d8b" />
+        <classShapeMoniker Id="53b493fe-ae62-4ef1-80ff-e72dc5d397a8" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

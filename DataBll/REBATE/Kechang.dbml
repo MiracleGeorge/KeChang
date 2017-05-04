@@ -141,29 +141,6 @@
       <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.youhoo_rebate_RebatePolicy" Member="youhoo_rebate_RebatePolicy">
-    <Type Name="youhoo_rebate_RebatePolicy">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="channel_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="price_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="region_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="sort_id_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SupportWay_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SupportPrice_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="RebateType_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="time_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="youhoo_rebate_RebatePolicy_youhoo_rebate_RebatePolicys" Member="youhoo_rebate_RebatePolicys" ThisKey="id" OtherKey="Policy_id" Type="youhoo_rebate_RebatePolicys" />
-    </Type>
-  </Table>
   <Table Name="dbo.youhoo_rebate_RebatePolicys" Member="youhoo_rebate_RebatePolicys">
     <Type Name="youhoo_rebate_RebatePolicys">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -218,6 +195,29 @@
       <Column Name="itemName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="itemCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="DisCount" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.youhoo_rebate_RebatePolicy" Member="youhoo_rebate_RebatePolicy">
+    <Type Name="youhoo_rebate_RebatePolicy">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="channel_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="region_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sort_id_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayWay_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RebateType_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="flag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateoperator" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="updatedate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="youhoo_rebate_RebatePolicy_youhoo_rebate_RebatePolicys" Member="youhoo_rebate_RebatePolicys" ThisKey="id" OtherKey="Policy_id" Type="youhoo_rebate_RebatePolicys" />
     </Type>
   </Table>
 </Database>

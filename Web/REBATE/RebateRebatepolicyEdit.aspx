@@ -81,18 +81,10 @@
             </td>
         </tr>
         <tr>
-            <td align="right" class="tableleft">支持方式：
+            <td align="right" class="tableleft">支付方式：
             </td>
             <td align="left">
                 <asp:DropDownList ID="ddl_supportWay" runat="server" DataTextField="Name" DataValueField="id">
-                </asp:DropDownList>
-            </td>
-        </tr>
-        <tr>
-            <td align="right" class="tableleft">支持价格：
-            </td>
-            <td align="left">
-                <asp:DropDownList ID="ddl_supportPrice" runat="server" DataTextField="Name" DataValueField="id">
                 </asp:DropDownList>
             </td>
         </tr>
@@ -108,9 +100,9 @@
             <td align="right" class="tableleft">时段：
             </td>
             <td align="left">
-                <asp:TextBox runat="server" CssClass="validate[required,custom[date]] Wdate input_100" onfocus="WdatePicker()"/>
+                <asp:TextBox runat="server" CssClass="validate[required,custom[date]] Wdate input_100" onfocus="WdatePicker()" ID="txt_startDate"/>
                 <span>至</span>
-                <asp:TextBox runat="server" CssClass="validate[required,custom[date]] Wdate input_100" onfocus="WdatePicker()"/>
+                <asp:TextBox runat="server" CssClass="validate[required,custom[date]] Wdate input_100" onfocus="WdatePicker()" ID="txt_endDate"/>
 
             </td>
         </tr>

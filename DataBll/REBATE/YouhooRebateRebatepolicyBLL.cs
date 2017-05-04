@@ -206,12 +206,8 @@ namespace YouHoo.DataBll
                         mainRet.channel_id = tableMain.channel_id;
                         mainRet.Code = tableMain.Code;
                         mainRet.sort_id_id = tableMain.sort_id_id;
-                        mainRet.SupportPrice_id = tableMain.SupportPrice_id;
-                        mainRet.SupportWay_id = tableMain.SupportWay_id;
-                        mainRet.time_id = tableMain.time_id;
                         mainRet.Name = tableMain.Name;
                         mainRet.RebateType_id = tableMain.RebateType_id;
-                        mainRet.price_id = tableMain.price_id;
                         mainRet.region_id = tableMain.region_id;
                     }
 
